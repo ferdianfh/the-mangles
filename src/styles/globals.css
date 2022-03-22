@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir/AvenirLTStd-Roman.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia/Georgia.ttf") format("truetype");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Avenir";
+}
+
+a {
+  text-decoration: none;
+  color: #0d253c !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.logoTitle {
+  margin: 0;
+  font-size: 1.7em;
+  font-weight: 700;
+}
+.activePage {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* ======================== FONT COLOR STYLES ====================== */
+.primaryTextColor {
+  color: #0d253c;
+}
+.secondaryTextColor {
+  color: #bfa2db;
+}
+.tertiaryTextColor {
+  color: #7f7c82;
+}
+.blackTextColor {
+  color: #000000;
+}
+.whiteTextColor {
+  color: #ffffff;
+}
+
+/* ======================== BACKGROUND COLOR STYLES ====================== */
+.primaryBgColor {
+  background-color: #ffffff;
+}
+.secondaryBgColor {
+  background-color: #b996da;
+  /* background-color: #022202; */
+}
+.tertiaryBgColor {
+  background-color: #caf7e3;
+}
+.quaternaryBgColor {
+  background-color: #fcd2d7;
+}
+.quinaryBgColor {
+  background-color: #f7dbf0;
+}
+.darkBgColor {
+  background-color: #0d253c;
+}
+
+/* ======================== FONT STYLES ====================== */
+
+.fontGeorgia {
+  font-family: "Georgia";
+}
+.fontAvenir {
+  font-family: "Avenir";
+}
+
+/* ======================== HERO SECTION ====================== */
+.main {
+  height: 100%;
+  width: 100%;
+}
+.heroSection {
+  height: 115vh;
+  padding: 1em 4em 0.3em 4em;
+  margin-top: -5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #0d253c;
+}
+.heroTitleWrapper {
+  flex: 1;
+  text-align: left;
+  margin-top: -5em;
+}
+.illustration {
+  flex: 2;
+}
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4em;
+}
+.subtitle {
+  line-height: 1.5;
+  font-size: 1.1em;
+}
+.btnHero {
+  margin-top: 2em;
+  padding: 1em 2.2em;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
