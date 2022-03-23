@@ -42,7 +42,6 @@ export default function ArticleDetails() {
               >
                 {detailArticle[0].titleArticle}
               </h1>
-
               <div className={styles.wrapper}>
                 <div className={styles.articleAuthorLg}>
                   <Image
@@ -83,7 +82,6 @@ export default function ArticleDetails() {
                   />
                 </div>
               </div>
-
               <Image
                 className={styles.articleImage}
                 src={detailArticle[0].imageArticle}
@@ -148,7 +146,7 @@ export default function ArticleDetails() {
         </section>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

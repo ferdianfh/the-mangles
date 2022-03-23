@@ -5,8 +5,11 @@ import styles from "./Navbar.module.css";
 import { BiBell, BiCircle } from "react-icons/bi";
 import blankProfile from "../../assets/profile.jpg";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Navbar({ heroColor, activePage }) {
+  const router = useRouter();
+
   const [click, setClick] = useState(true);
   const [navbar, setNavbar] = useState(false);
   const [navColor, setNavColor] = useState(false);
@@ -72,10 +75,14 @@ export default function Navbar({ heroColor, activePage }) {
           <section className={styles.eventSection}>
             {click ? (
               <div className={styles.btnNavbarWrapper}>
-                <Button className={`${styles.btnNavbar} ${styles.signup}`}>
+                <Button
+                  onClick={() => router.push("/auth/signup")}
+                  className={`${styles.btnNavbar} ${styles.signup}`}
+                >
                   Sign up
                 </Button>
                 <Button
+                  onClick={() => router.push("/auth/login")}
                   className={`${styles.btnNavbar} secondaryBgColor whiteTextColor`}
                 >
                   Login
