@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   font-size: 0.78em;
+  cursor: pointer;
 }
 .articleAuthor p {
   margin: 0.9em 0.5em;
@@ -45,5 +46,6 @@
 }
 .bookmarkIcon {
   font-size: 1.1em;
+  cursor: pointer;
 }
 /* -------------------- article card sm end here -------------- */
