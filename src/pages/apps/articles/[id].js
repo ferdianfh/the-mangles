@@ -13,129 +13,138 @@ export default function ArticleDetails() {
   const router = useRouter();
   const { id } = router.query;
   const convertedId = parseInt(id);
-  const detailArticle = [];
-  let result;
-  const selectedArticle = articles.map((article) => {
-    if (article.id === convertedId) {
-      result = detailArticle.push(article);
-      return result;
-    }
-  });
-  console.log(detailArticle);
 
   return (
     <>
-      <Header
-        title={detailArticle[0].titleArticle}
-        description={detailArticle[0].descriptionArticle}
-        keywords={`The Mangles, News Web Apps, news, articles, write, ${detailArticle[0].category}`}
-      />
+      {articles.map((article, id) => {
+        if (article.id === convertedId)
+          return (
+            <Header
+              key={id}
+              title={article.titleArticle}
+              description={article.descriptionArticle}
+              keywords={`The Mangles, News Web Apps, news, articles, write, ${article.category}`}
+            />
+          );
+      })}
 
       <Navbar activePage="articles" />
 
       <main className="main">
         <section className={styles.articleSection}>
-          <div className={styles.contentWrapper}>
-            <div className={styles.articleInfo}>
-              <h1
-                className={`${styles.articleTitle} primaryTextColor fontAvenir`}
-              >
-                {detailArticle[0].titleArticle}
-              </h1>
-              <div className={styles.wrapper}>
-                <div className={styles.articleAuthorLg}>
-                  <Image
-                    className={styles.authorPictureLg}
-                    src={detailArticle[0].authorPicture}
-                    alt="author"
-                    width={42}
-                    height={42}
-                  />
-                  <p>{detailArticle[0].author}</p>
+          {articles.map((article) => {
+            if (article.id === convertedId)
+              return (
+                <div className={styles.contentWrapper}>
+                  <div className={styles.articleInfo}>
+                    <h1
+                      className={`${styles.articleTitle} primaryTextColor fontAvenir`}
+                    >
+                      {article.titleArticle}
+                    </h1>
+                    <div className={styles.wrapper}>
+                      <div className={styles.articleAuthorLg}>
+                        <Image
+                          className={styles.authorPictureLg}
+                          src={article.authorPicture}
+                          alt="author"
+                          width={42}
+                          height={42}
+                        />
+                        <p>{article.author}</p>
+                      </div>
+
+                      <div className={styles.iconWrapper}>
+                        <BsCircleFill
+                          className={`${styles.separateIcon} tertiaryTextColor`}
+                        />
+                      </div>
+
+                      <p className={`${styles.dateArticle} tertiaryTextColor`}>
+                        {article.createdAt}
+                      </p>
+
+                      <div className={styles.iconWrapper}>
+                        <BsCircleFill
+                          className={`${styles.separateIcon} tertiaryTextColor`}
+                        />
+                      </div>
+
+                      <div className={styles.iconWrapper}>
+                        <FiSend
+                          className={`${styles.bookmarkIconLg} tertiaryTextColor`}
+                        />
+                        <BsLink45Deg
+                          className={`${styles.bookmarkIconLg} tertiaryTextColor`}
+                        />
+                        <BsBookmark
+                          className={`${styles.bookmarkIconLg} tertiaryTextColor`}
+                        />
+                      </div>
+                    </div>
+                    <Image
+                      className={styles.articleImage}
+                      src={article.imageArticle}
+                      alt="imageArticle"
+                      width={755}
+                      height={405}
+                    />
+                  </div>
+
+                  <div className={styles.articleContent}>
+                    <p
+                      className={`${styles.descriptionArticle} tertiaryTextColor fontGeorgia`}
+                    >
+                      <i>&quot;{article.descriptionArticle}&quot;</i>
+                    </p>
+
+                    <p className={`${styles.paragrafArticle} primaryTextColor`}>
+                      {article.content.paragraf1}
+                    </p>
+                    <p className={`${styles.paragrafArticle} primaryTextColor`}>
+                      {article.content.paragraf2}
+                    </p>
+                    <p className={`${styles.paragrafArticle} primaryTextColor`}>
+                      {article.content.paragraf3}
+                    </p>
+                  </div>
+
+                  {/* <div className={styles.articleComment}>Comment</div> */}
                 </div>
-
-                <div className={styles.iconWrapper}>
-                  <BsCircleFill
-                    className={`${styles.separateIcon} tertiaryTextColor`}
-                  />
-                </div>
-
-                <p className={`${styles.dateArticle} tertiaryTextColor`}>
-                  {detailArticle[0].createdAt}
-                </p>
-
-                <div className={styles.iconWrapper}>
-                  <BsCircleFill
-                    className={`${styles.separateIcon} tertiaryTextColor`}
-                  />
-                </div>
-
-                <div className={styles.iconWrapper}>
-                  <FiSend
-                    className={`${styles.bookmarkIconLg} tertiaryTextColor`}
-                  />
-                  <BsLink45Deg
-                    className={`${styles.bookmarkIconLg} tertiaryTextColor`}
-                  />
-                  <BsBookmark
-                    className={`${styles.bookmarkIconLg} tertiaryTextColor`}
-                  />
-                </div>
-              </div>
-              <Image
-                className={styles.articleImage}
-                src={detailArticle[0].imageArticle}
-                alt="imageArticle"
-                width={755}
-                height={405}
-              />
-            </div>
-
-            <div className={styles.articleContent}>
-              <p
-                className={`${styles.descriptionArticle} tertiaryTextColor fontGeorgia`}
-              >
-                <i>&quot;{detailArticle[0].descriptionArticle}&quot;</i>
-              </p>
-
-              <p className={`${styles.paragrafArticle} primaryTextColor`}>
-                {detailArticle[0].content.paragraf1}
-              </p>
-              <p className={`${styles.paragrafArticle} primaryTextColor`}>
-                {detailArticle[0].content.paragraf2}
-              </p>
-              <p className={`${styles.paragrafArticle} primaryTextColor`}>
-                {detailArticle[0].content.paragraf3}
-              </p>
-            </div>
-
-            {/* <div className={styles.articleComment}>Comment</div> */}
-          </div>
+              );
+          })}
 
           <div className={styles.additionalInfo}>
             <h2 className="primaryTextColor fontGeorgia">Author Profile</h2>
 
-            <div className={styles.topAuthorsWrapper}>
-              <div className={styles.authorDetails}>
-                <div>
-                  <Image
-                    className={styles.authorImg}
-                    src={detailArticle[0].authorPicture}
-                    alt="TopAuthor"
-                    width={57}
-                    height={57}
-                  />
-                </div>
+            {articles.map((article, id) => {
+              if (article.id === convertedId)
+                return (
+                  <div className={styles.topAuthorsWrapper}>
+                    <div className={styles.authorDetails}>
+                      <div>
+                        <Image
+                          className={styles.authorImg}
+                          src={article.authorPicture}
+                          alt="TopAuthor"
+                          width={57}
+                          height={57}
+                        />
+                      </div>
 
-                <div className={styles.authorInfo}>
-                  <p className={styles.authorName}>{detailArticle[0].author}</p>
-                  <p className={`${styles.authorAbout} tertiaryTextColor`}>
-                    I usually code with JavaScript, but sometimes i write
-                    article to escape.
-                  </p>
-                </div>
-              </div>
-            </div>
+                      <div className={styles.authorInfo}>
+                        <p className={styles.authorName}>{article.author}</p>
+                        <p
+                          className={`${styles.authorAbout} tertiaryTextColor`}
+                        >
+                          I usually code with JavaScript, but sometimes i write
+                          article to escape.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+            })}
 
             <Button
               className={`${styles.btnAuthor} secondaryBgColor whiteTextColor`}
@@ -146,7 +155,7 @@ export default function ArticleDetails() {
         </section>
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

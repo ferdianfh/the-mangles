@@ -5,10 +5,10 @@ import Footer from "../../../components/Footer";
 import styles from "../../../styles/Categories.module.css";
 import illustration3 from "../../../assets/MessyDoodle.png";
 import { categories } from "../../../helpers/arrayCategories";
-import { useState } from "react/cjs/react.development";
 import CardCategory from "../../../components/CardCategory";
 import Button from "../../../components/base/Button";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function Categories() {
   const router = useRouter();
@@ -61,44 +61,60 @@ export default function Categories() {
               );
             })}
           </div>
+
           <div className={styles.Description}>
-            <div className={styles.categoryDetails}>
-              <Image
-                src={desc.imageCategory ? desc.imageCategory : illustration3}
-                alt="category"
-                width={280}
-                height={280}
-              />
-              <h1 className="primaryTextColor">{desc.nameCategory}</h1>
+            {categories.map((category) => {
+              if (category.codeCategory === desc.codeCategory)
+                return (
+                  <div key={category.id} className={styles.categoryDetails}>
+                    <Image
+                      src={
+                        category.imageCategory
+                          ? category.imageCategory
+                          : illustration3
+                      }
+                      alt="category"
+                      width={280}
+                      height={280}
+                    />
+                    <h1 className="primaryTextColor">
+                      {category.nameCategory}
+                    </h1>
 
-              <div className={`${styles.descriptionWrapper} primaryTextColor`}>
-                <p className={styles.descriptionTitle}>Description:</p>
-                <p className={styles.descriptionContent}>
-                  {desc.descriptionCategory}{" "}
-                </p>
-              </div>
+                    <div
+                      className={`${styles.descriptionWrapper} primaryTextColor`}
+                    >
+                      <p className={styles.descriptionTitle}>Description:</p>
+                      <p className={styles.descriptionContent}>
+                        {category.descriptionCategory}{" "}
+                      </p>
+                    </div>
 
-              <div className={`${styles.descriptionWrapper} primaryTextColor`}>
-                <p>
-                  <span>Total Articles:</span>{" "}
-                  {desc.totalArticles > 0
-                    ? `${desc.totalArticles} Articles`
-                    : "0 Article"}
-                </p>
-                <p>
-                  <span>Date Created:</span> {desc.createdAt}
-                </p>
-              </div>
+                    <div
+                      className={`${styles.descriptionWrapper} primaryTextColor`}
+                    >
+                      <p>
+                        <span>Total Articles:</span>{" "}
+                        {category.totalArticles > 0
+                          ? `${category.totalArticles} Articles`
+                          : "0 Article"}
+                      </p>
+                      <p>
+                        <span>Date Created:</span> {category.createdAt}
+                      </p>
+                    </div>
 
-              <Button
-                onClick={() =>
-                  router.push(`/apps/categories/${desc.codeCategory}`)
-                }
-                className={`${styles.btnExploreCategory} secondaryBgColor whiteTextColor`}
-              >
-                Explore Category
-              </Button>
-            </div>
+                    <Button
+                      onClick={() =>
+                        router.push(`/apps/categories/${category.codeCategory}`)
+                      }
+                      className={`${styles.btnExploreCategory} secondaryBgColor whiteTextColor`}
+                    >
+                      Explore Category
+                    </Button>
+                  </div>
+                );
+            })}
           </div>
         </section>
       </main>
