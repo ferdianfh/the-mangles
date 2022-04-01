@@ -34,7 +34,7 @@ export default function Articles() {
               a month or you can request to be an author if you <br /> have been
               a member for three months.
             </p>
-            <Button className="btnHero secondaryBgColor whiteTextColor fontAvenir">
+            <Button className="btnHero secondaryBgColor whiteTextColor fontAvenir hover:bg-purple-400 active:bg-purple-500 transition-colors">
               Start Writing
             </Button>
           </div>

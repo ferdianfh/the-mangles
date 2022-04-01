@@ -83,7 +83,7 @@ export default function Navbar({ heroColor, activePage }) {
                 </Button>
                 <Button
                   onClick={() => router.push("/auth/login")}
-                  className={`${styles.btnNavbar} secondaryBgColor whiteTextColor`}
+                  className={`${styles.btnNavbar} secondaryBgColor whiteTextColor shadow-md hover:bg-purple-400 active:bg-purple-500 transition-colors`}
                 >
                   Login
                 </Button>

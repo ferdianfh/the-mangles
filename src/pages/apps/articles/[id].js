@@ -6,6 +6,7 @@ import Navbar from "../../../components/Navbar";
 import { articles } from "../../../helpers/arrayArticles";
 import styles from "../../../styles/ArticleDetails.module.css";
 import { BsBookmark, BsCircleFill, BsLink45Deg } from "react-icons/bs";
+import { IoIosArrowBack } from "react-icons/io";
 import { FiSend } from "react-icons/fi";
 import Button from "../../../components/base/Button";
 
@@ -37,37 +38,38 @@ export default function ArticleDetails() {
               return (
                 <div className={styles.contentWrapper}>
                   <div className={styles.articleInfo}>
-                    <h1
-                      className={`${styles.articleTitle} primaryTextColor fontAvenir`}
+                    <div
+                      className={`${styles.wrapper} flex-row justify-between`}
                     >
-                      {article.titleArticle}
-                    </h1>
-                    <div className={styles.wrapper}>
-                      <div className={styles.articleAuthorLg}>
-                        <Image
-                          className={styles.authorPictureLg}
-                          src={article.authorPicture}
-                          alt="author"
-                          width={42}
-                          height={42}
-                        />
-                        <p>{article.author}</p>
-                      </div>
+                      <div className={styles.authorDateWrapper}>
+                        <div className={styles.articleAuthorLg}>
+                          <Image
+                            className={styles.authorPictureLg}
+                            src={article.authorPicture}
+                            alt="author"
+                            width={42}
+                            height={42}
+                          />
+                          <p>{article.author}</p>
+                        </div>
 
-                      <div className={styles.iconWrapper}>
-                        <BsCircleFill
-                          className={`${styles.separateIcon} tertiaryTextColor`}
-                        />
-                      </div>
+                        <div className={styles.iconWrapper}>
+                          <BsCircleFill
+                            className={`${styles.separateIcon} tertiaryTextColor`}
+                          />
+                        </div>
 
-                      <p className={`${styles.dateArticle} tertiaryTextColor`}>
-                        {article.createdAt}
-                      </p>
+                        <p
+                          className={`${styles.dateArticle} tertiaryTextColor`}
+                        >
+                          {article.createdAt}
+                        </p>
 
-                      <div className={styles.iconWrapper}>
-                        <BsCircleFill
-                          className={`${styles.separateIcon} tertiaryTextColor`}
-                        />
+                        {/* <div className={styles.iconWrapper}>
+                          <BsCircleFill
+                            className={`${styles.separateIcon} tertiaryTextColor`}
+                          />
+                        </div> */}
                       </div>
 
                       <div className={styles.iconWrapper}>
@@ -82,6 +84,13 @@ export default function ArticleDetails() {
                         />
                       </div>
                     </div>
+
+                    <h1
+                      className={`${styles.articleTitle} primaryTextColor fontAvenir`}
+                    >
+                      {article.titleArticle}
+                    </h1>
+
                     <Image
                       className={styles.articleImage}
                       src={article.imageArticle}
@@ -147,7 +156,7 @@ export default function ArticleDetails() {
             })}
 
             <Button
-              className={`${styles.btnAuthor} secondaryBgColor whiteTextColor`}
+              className={`${styles.btnAuthor} secondaryBgColor whiteTextColor shadow-md`}
             >
               Follow
             </Button>

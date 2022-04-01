@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "Avenir";
   src: url("../fonts/Avenir/AvenirLTStd-Roman.otf") format("opentype");
@@ -124,4 +128,9 @@ button {
   font-size: 1em;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
 }

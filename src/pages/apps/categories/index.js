@@ -108,7 +108,7 @@ export default function Categories() {
                       onClick={() =>
                         router.push(`/apps/categories/${category.codeCategory}`)
                       }
-                      className={`${styles.btnExploreCategory} secondaryBgColor whiteTextColor`}
+                      className={`${styles.btnExploreCategory} secondaryBgColor whiteTextColor hover:bg-purple-400 active:bg-purple-500 transition-colors`}
                     >
                       Explore Category
                     </Button>
