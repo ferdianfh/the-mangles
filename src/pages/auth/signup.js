@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import Header from "../../components/Header";
 import Input from "../../components/base/Input";
 import Button from "../../components/base/Button";
@@ -26,6 +27,7 @@ export default function Signup() {
                 <strong className="cursor-pointer hover:underline">
                   <Link href="/">The Mangl&eacute;s!</Link>
                 </strong>{" "}
+                <br />
                 Create an account to enjoy our full feautres!
               </p>
 
@@ -72,9 +74,11 @@ export default function Signup() {
                 </span>{" "}
               </p>
 
-              <p className="uppercase text-center underline cursor-pointer">
-                <Link href="/">Back to Home</Link>
-              </p>
+              <Link href="/">
+                <p className="uppercase text-purple-900 text-center font-bold underline cursor-pointer">
+                  Back to Home
+                </p>
+              </Link>
             </div>
           </section>
         </div>
