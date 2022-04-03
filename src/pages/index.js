@@ -88,7 +88,9 @@ export default function Home() {
               {articles.map((article) => {
                 return (
                   <CardArticleSm
-                    action={() => router.push(`/apps/articles/${article.id}`)}
+                    action={() =>
+                      router.push(`/apps/articles/${article.titleArticle}`)
+                    }
                     key={article.id}
                     imageArticle={article.imageArticle}
                     titleArticle={article.titleArticle}
@@ -167,7 +169,9 @@ export default function Home() {
                 if (article.id === 3 || article.id === 5 || article.id === 6)
                   return (
                     <CardArticleLg
-                      action={() => router.push(`/apps/articles/${article.id}`)}
+                      action={() =>
+                        router.push(`/apps/articles/${article.titleArticle}`)
+                      }
                       key={article.id}
                       imageArticle={article.imageArticle}
                       titleArticle={article.titleArticle}

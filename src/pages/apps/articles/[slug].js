@@ -12,13 +12,13 @@ import Button from "../../../components/base/Button";
 
 export default function ArticleDetails() {
   const router = useRouter();
-  const { id } = router.query;
-  const convertedId = parseInt(id);
+  const { slug } = router.query;
+  // const convertedId = parseInt(id);
 
   return (
     <>
       {articles.map((article, id) => {
-        if (article.id === convertedId)
+        if (article.titleArticle === slug)
           return (
             <Header
               key={id}
@@ -34,7 +34,7 @@ export default function ArticleDetails() {
       <main className="main">
         <section className={styles.articleSection}>
           {articles.map((article) => {
-            if (article.id === convertedId)
+            if (article.titleArticle === slug)
               return (
                 <div className={styles.contentWrapper}>
                   <div className={styles.articleInfo}>
@@ -129,7 +129,7 @@ export default function ArticleDetails() {
             </h2>
 
             {articles.map((article, id) => {
-              if (article.id === convertedId)
+              if (article.titleArticle === slug)
                 return (
                   <div className={styles.topAuthorsWrapper}>
                     <div className={styles.authorDetails}>

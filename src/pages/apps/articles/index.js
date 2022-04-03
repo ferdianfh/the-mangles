@@ -52,7 +52,9 @@ export default function Articles() {
             {articles.map((article) => {
               return (
                 <CardArticleLg
-                  action={() => router.push(`/apps/articles/${article.id}`)}
+                  action={() =>
+                    router.push(`/apps/articles/${article.titleArticle}`)
+                  }
                   key={article.id}
                   imageArticle={article.imageArticle}
                   titleArticle={article.titleArticle}
