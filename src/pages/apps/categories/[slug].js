@@ -50,7 +50,9 @@ export default function Category() {
                         return (
                           <CardArticleLg
                             action={() =>
-                              router.push(`/apps/articles/${article.id}`)
+                              router.push(
+                                `/apps/articles/${article.titleArticle}`
+                              )
                             }
                             key={article.id}
                             imageArticle={article.imageArticle}
