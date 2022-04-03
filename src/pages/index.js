@@ -34,7 +34,7 @@ export default function Home() {
               Share Information <br /> and Educate People.
             </h1>
             <p className="subtitle text-xl text-black">
-              Everyone has their own point of view, stories, <br /> opinians,
+              Everyone has their own point of view, stories, <br /> opinions,
               and ideas. Share your unique perspective <br /> to the world and
               help other people write their own stories.
             </p>
