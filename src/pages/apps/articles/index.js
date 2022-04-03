@@ -26,10 +26,10 @@ export default function Articles() {
       <main className="main">
         <section className="heroSection quaternaryBgColor">
           <div className="heroTitleWrapper">
-            <h1 className="title fontGeorgia primaryTextColor text-7xl">
+            <h1 className="title fontGeorgia text-black text-7xl">
               Start Writing Your <br /> Own Articles.
             </h1>
-            <p className="subtitle text-xl primaryTextColor">
+            <p className="subtitle text-xl text-black">
               You can be an author by being active in reading articles <br /> in
               a month or you can request to be an author if you <br /> have been
               a member for three months.

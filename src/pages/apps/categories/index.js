@@ -30,10 +30,10 @@ export default function Categories() {
       <main className="main">
         <section className="heroSection tertiaryBgColor">
           <div className="heroTitleWrapper">
-            <h1 className="title fontGeorgia primaryTextColor text-7xl">
+            <h1 className="title fontGeorgia text-black text-7xl">
               Choose Article by Category.
             </h1>
-            <p className="subtitle text-xl primaryTextColor">
+            <p className="subtitle text-xl text-black">
               Category helps you to read another article that you <br /> haven’t
               thought before. You able to read all articles for free. <br />{" "}
               Enjoy the reading!

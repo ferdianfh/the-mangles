@@ -30,10 +30,10 @@ export default function Home() {
       <main className="main">
         <section className="heroSection quinaryBgColor">
           <div className="heroTitleWrapper">
-            <h1 className="title fontGeorgia primaryTextColor text-7xl ">
+            <h1 className="title fontGeorgia text-black text-7xl ">
               Share Information <br /> and Educate People.
             </h1>
-            <p className="subtitle text-xl primaryTextColor">
+            <p className="subtitle text-xl text-black">
               Everyone has their own point of view, stories, <br /> opinians,
               and ideas. Share your unique perspective <br /> to the world and
               help other people write their own stories.

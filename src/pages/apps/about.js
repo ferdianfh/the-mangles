@@ -22,7 +22,7 @@ export default function AboutUs() {
 
       <main className="main">
         <section className="heroSection bg-white">
-          <p className="fontGeorgia primaryTextColor text-8xl text-center">
+          <p className="fontGeorgia text-black text-8xl text-center">
             Be <strong className="font-extrabold">Bold</strong>. Be{" "}
             <em>Unique</em>. <br />
             Be <span className="uppercase underline">you</span>.{" "}
@@ -115,7 +115,7 @@ export default function AboutUs() {
             </p>
 
             <Button className="bg-gloomyPurple text-white text-xl px-8 py-4 mt-12 rounded-md shadow-md cursor-pointer hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors">
-              Request to be Author
+              Request to be an Author
             </Button>
           </div>
 
