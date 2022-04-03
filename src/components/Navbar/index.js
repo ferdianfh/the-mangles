@@ -68,7 +68,9 @@ export default function Navbar({ heroColor, activePage }) {
               <li className={activePage === "category" ? "activePage" : null}>
                 <Link href="/apps/categories">Category</Link>
               </li>
-              <li>About</li>
+              <li className={activePage === "about" ? "activePage" : null}>
+                <Link href="/apps/about">About</Link>
+              </li>
             </ul>
           </section>
 
@@ -83,7 +85,7 @@ export default function Navbar({ heroColor, activePage }) {
                 </Button>
                 <Button
                   onClick={() => router.push("/auth/login")}
-                  className={`${styles.btnNavbar} secondaryBgColor whiteTextColor shadow-md hover:bg-purple-400 active:bg-purple-500 transition-colors`}
+                  className={`${styles.btnNavbar} secondaryBgColor whiteTextColor shadow-md hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors`}
                 >
                   Login
                 </Button>

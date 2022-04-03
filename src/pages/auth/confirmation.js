@@ -11,7 +11,7 @@ export default function EmailConfirmation() {
   return (
     <>
       <Header
-        title="Email Confirmation to Reset Password - The Mangl&eacute;s"
+        title="Forgotten Password - The Mangl&eacute;s"
         description="Enter your email adress that you used to register and we’ll give you instructions to reset your password."
       />
 
@@ -23,7 +23,7 @@ export default function EmailConfirmation() {
             <div
               className={`${styles.formContainer} fontAvenir primaryTextColor primaryBgColor px-4`}
             >
-              <h2 className="mx-1 mt-5 mb-2 text-3xl ">Email Confirmation</h2>
+              <h2 className="mx-1 mt-5 mb-2 text-3xl ">Forgot Password</h2>
               <p className="text-center mt-4 mb-8 text-base">
                 We are here to help you to recover your password. Enter your
                 email adress that you used to register and we’ll give you
@@ -37,14 +37,14 @@ export default function EmailConfirmation() {
                 <Input
                   type="email"
                   placeholder="Enter your email address"
-                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md outline-none focus-within:border-[#bfa2db]"
+                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 w-full bg-white placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md focus:outline-none focus:border-[#bfa2db] focus:ring-[#bfa2db] focus:ring-1"
                   id="email"
                 />
               </form>
 
               <Button
                 onClick={() => router.push("/auth/create-new-password")}
-                className="secondaryBgColor fontAvenir text-white text-base font-bold mt-36 mx-4 px-8 py-3 rounded-md cursor-pointer hover:bg-purple-400 active:bg-purple-500"
+                className="secondaryBgColor fontAvenir text-white text-base font-bold mt-36 mx-4 px-8 py-3 rounded-md cursor-pointer hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors"
               >
                 Send Email
               </Button>

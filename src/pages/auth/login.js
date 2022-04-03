@@ -9,7 +9,7 @@ export default function Login() {
   return (
     <>
       <Header
-        title="Login or Signup - The Mangl&eacute;s"
+        title="Login for The Mangl&eacute;s - The Mangl&eacute;s"
         description="Login into your existing account"
       />
 
@@ -23,7 +23,7 @@ export default function Login() {
             >
               <h2 className="mx-1 mt-5 mb-2 text-3xl ">Login</h2>
               <p className="text-center mt-4 mb-8 text-base">
-                Hello, welcome back to{" "}
+                Welcome back to{" "}
                 <strong className="cursor-pointer hover:underline">
                   <Link href="/">The Mangl&eacute;s!</Link>
                 </strong>
@@ -36,7 +36,7 @@ export default function Login() {
                 <Input
                   type="email"
                   placeholder="Enter your email address"
-                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md outline-none focus-within:border-[#bfa2db]"
+                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 w-full bg-white placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md focus:outline-none focus:border-[#bfa2db] focus:ring-[#bfa2db] focus:ring-1"
                   id="email"
                 />
 
@@ -46,15 +46,15 @@ export default function Login() {
                 <Input
                   type="password"
                   placeholder="Enter your password"
-                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md outline-none focus-within:border-[#bfa2db]"
+                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 w-full bg-white placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md focus:outline-none focus:border-[#bfa2db] focus:ring-[#bfa2db] focus:ring-1"
                   id="password"
                 />
 
-                <p className="text-right hover:underline hover:cursor-help">
+                <p className="text-right text-sm hover:underline hover:cursor-pointer">
                   <Link href="/auth/confirmation">Forgot Password?</Link>
                 </p>
 
-                <Button className="secondaryBgColor fontAvenir text-white text-base font-bold mt-7 px-8 py-3 rounded-md cursor-pointer hover:bg-purple-400 active:bg-purple-500">
+                <Button className="secondaryBgColor fontAvenir text-white text-base font-bold mt-7 px-8 py-3 rounded-md cursor-pointer hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors">
                   Login
                 </Button>
               </form>

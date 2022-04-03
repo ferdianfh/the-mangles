@@ -26,15 +26,15 @@ export default function Articles() {
       <main className="main">
         <section className="heroSection quaternaryBgColor">
           <div className="heroTitleWrapper">
-            <h1 className="title fontGeorgia primaryTextColor">
-              Start Writing Your <br /> Own Articles
+            <h1 className="title fontGeorgia primaryTextColor text-7xl">
+              Start Writing Your <br /> Own Articles.
             </h1>
             <p className="subtitle primaryTextColor">
               You can be an author by being active in reading articles <br /> in
               a month or you can request to be an author if you <br /> have been
               a member for three months.
             </p>
-            <Button className="btnHero secondaryBgColor whiteTextColor fontAvenir hover:bg-purple-400 active:bg-purple-500 transition-colors">
+            <Button className="btnHero secondaryBgColor whiteTextColor fontAvenir hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors">
               Start Writing
             </Button>
           </div>

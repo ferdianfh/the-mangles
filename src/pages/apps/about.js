@@ -1,0 +1,171 @@
+import Link from "next/link";
+import React from "react";
+import Accordion from "../../components/Accordion";
+import Button from "../../components/base/Button";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import Navbar from "../../components/Navbar";
+import styles from "../../styles/About.module.css";
+import logo from "../../assets/logo.png";
+import Image from "next/image";
+
+export default function AboutUs() {
+  return (
+    <>
+      <Header
+        title="A Story About The Mangl&eacute;s"
+        description="A Brief Story About The Mangl&eacute;s and Why you should start exploring it!"
+        keywords="The Mangles, News Web Apps, news, articles, about us, what is the mangl&eacute;s?, why is the mangl&eacute;s"
+      />
+
+      <Navbar heroColor="about" activePage="about" />
+
+      <main className="main">
+        <section className="heroSection bg-white">
+          <p className="fontGeorgia primaryTextColor text-8xl text-center">
+            Be <strong className="font-extrabold">Bold</strong>. Be{" "}
+            <em>Unique</em>. <br />
+            Be <span className="uppercase underline">you</span>.{" "}
+          </p>
+        </section>
+
+        <section
+          className={`${styles.visiMisiSection} h-3/6 w-full flex flex-row `}
+        >
+          <div
+            className={`${styles.description} flex-1 bg-amber-100 text-veryDarkBlue text-2xl text-justify fontGeorgia pl-16 pr-6 py-10`}
+          >
+            <p className="m-0 first-letter:text-9xl first-letter:font-bold first-letter:float-left first-letter:mr-8 ">
+              The Mangl&eacute;s was created for one special mission, to help
+              people expressing their complicated yet wonderful thoughts,
+              imagination and ideas into words by creating a safe and fun
+              platform.
+            </p>
+
+            <p>
+              In the making of <strong>The Mangl&eacute;s</strong> (de mang:
+              glz), i was inspired by a lot of masterpieces with the same
+              purpose. The first one is{" "}
+              <strong className="hover:cursor-pointer underline">
+                <Link href="https://id.wikipedia.org/wiki/Mangl%C3%A9">
+                  Mangl&eacute;
+                </Link>
+              </strong>{" "}
+              (ma:ng l&aelig;), it is a Sundanese traditional magazine that
+              contains a lot of stuff from articles to carpon (short story). And
+              the other one is one of the greatest platform for reading,
+              writing, and publishing cool stuff and ideas in this century, none
+              of the other is{" "}
+              <strong className="hover:cursor-pointer underline">
+                <Link href="https://medium.com">Medium.</Link>
+              </strong>
+            </p>
+          </div>
+
+          <div
+            className={`${styles.quotes} flex-1 bg-amber-50 p-4 flex justify-center align-middle `}
+          >
+            <blockquote className="fontGeorgia text-6xl text-veryDarkBlue self-center">
+              &quot;Creativity is Intelligence Having Fun&quot; <br /> &#8212;
+              Albert Einstein
+            </blockquote>
+          </div>
+        </section>
+
+        <section className="h-full w-full bg-veryDarkBlue fontGeorgia text-white flex flex-col ">
+          <div
+            className={`${styles.whyIsTheMangles} text-6xl flex justify-center align-middle p-6`}
+          >
+            <p className="">
+              Why is <strong>The Mangl&eacute;s</strong>?
+            </p>
+          </div>
+
+          <div className={`${styles.reasons} flex flex-row`}>
+            <div className={`${styles.left} flex-1 text-3xl pl-16 pr-1 py-8`}>
+              <p className="first-letter:text-8xl first-letter:mr-3  my-1">
+                1. A classic, familiar, and fun user interface designed to make
+                you feel comfortable spend time reading and writing with us.
+              </p>
+            </div>
+
+            <div className={`${styles.right} flex-1 flex flex-col text-3xl `}>
+              <div className={`${styles.rightTop} flex-1 py-4 pl-5 pr-16`}>
+                <p className="first-letter:text-8xl first-letter:mr-3">
+                  2. Interesting topics to satisfy your curious mind.
+                </p>
+              </div>
+              <div className={`${styles.rightBot} flex-1 py-4 pl-5 pr-16`}>
+                <p className="first-letter:text-8xl first-letter:mr-3">
+                  3. All features are free to use without any limitation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={" h-3/6 w-full bg-white"}>
+          <div
+            className={`${styles.borderBottomDark} px-16 py-20 fontGeorgia text-center`}
+          >
+            <p className="m-0 text-8xl mt-10">Start Writing Right Now.</p>
+            <p className="text-2xl">
+              Be an author and start expressing your thoughts, feelings,
+              imagination, and ideas.
+            </p>
+
+            <Button className="bg-gloomyPurple text-white text-xl px-8 py-4 mt-12 rounded-md shadow-md cursor-pointer hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors">
+              Request to be Author
+            </Button>
+          </div>
+
+          <div className="flex flex-row fontGeorgia ">
+            <div
+              className={`${styles.borderRightDark} flex-1 pl-16 pr-9 py-12`}
+            >
+              <p className="m-0 text-5xl">Join Our Community.</p>
+              <p className="text-xl cursor-pointer hover:underline">Blog</p>
+              <p className="text-xl cursor-pointer hover:underline">Twitter</p>
+
+              <p className="m-0 mt-10 text-5xl">Resources.</p>
+              <p className="text-xl cursor-pointer ">
+                Illustration:{" "}
+                <span className="underline">
+                  <Link href="https://opendoodles.com/">Open Doodles</Link>
+                </span>
+              </p>
+              <p className="text-xl cursor-pointer ">
+                Images:{" "}
+                <span className="underline">
+                  <Link href="https://unsplash.com/">Unsplash</Link>
+                </span>
+              </p>
+            </div>
+
+            <div className="flex-1 pl-8 py-12 flex m-auto">
+              <div className="flex flex-row justify-start align-middle ">
+                <Image src={logo} alt="logo" width={120} height={120} />
+                <div className="flex flex-col ml-2">
+                  <h1 className=" mb-0 text-5xl">The Mangl&eacute;s</h1>
+                  <p className="m-0 text-lg">
+                    &copy; Copyright 2022. All Right Reserved.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* <section
+          className={`${styles.faqSection} text-white fontGeorgia bg-black py-16 px-16`}
+        >
+          <p className="m-0 text-6xl ">Frequently Asked Question.</p>
+
+          <Accordion />
+        </section> */}
+      </main>
+
+      <Footer />
+    </>
+  );
+}

@@ -9,7 +9,7 @@ export default function Signup() {
   return (
     <>
       <Header
-        title="Login or Signup - The Mangl&eacute;s"
+        title="Signup for The Mangl&eacute;s - The Mangl&eacute;s"
         description="Create new account and start exploring and writing now!"
       />
 
@@ -23,7 +23,7 @@ export default function Signup() {
             >
               <h2 className="mx-1 mt-5 mb-2 text-3xl ">Sign Up</h2>
               <p className="text-center mt-4 mb-8 text-base">
-                Hey, welcome to{" "}
+                Hello, welcome to{" "}
                 <strong className="cursor-pointer hover:underline">
                   <Link href="/">The Mangl&eacute;s!</Link>
                 </strong>{" "}
@@ -38,7 +38,7 @@ export default function Signup() {
                 <Input
                   type="text"
                   placeholder="Enter your name"
-                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md outline-none focus-within:border-[#bfa2db]"
+                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 bg-white placeholder:text-[#7f7c82] w-full border border-[#0d253c] rounded-md focus:outline-none focus:border-[#bfa2db] focus:ring-[#bfa2db] focus:ring-1"
                   id="fullname"
                 />
 
@@ -48,7 +48,7 @@ export default function Signup() {
                 <Input
                   type="email"
                   placeholder="Enter your email address"
-                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md outline-none focus-within:border-[#bfa2db]"
+                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 w-full bg-white placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md focus:outline-none focus:border-[#bfa2db] focus:ring-[#bfa2db] focus:ring-1"
                   id="email"
                 />
 
@@ -58,11 +58,11 @@ export default function Signup() {
                 <Input
                   type="password"
                   placeholder="Enter your password"
-                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md outline-none focus-within:border-[#bfa2db]"
+                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 w-full bg-white placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md focus:outline-none focus:border-[#bfa2db] focus:ring-[#bfa2db] focus:ring-1"
                   id="password"
                 />
 
-                <Button className="secondaryBgColor fontAvenir text-white text-base font-bold mt-7 px-8 py-3 rounded-md cursor-pointer hover:bg-purple-400 active:bg-purple-500">
+                <Button className="secondaryBgColor fontAvenir text-white text-base font-bold mt-7 px-8 py-3 rounded-md cursor-pointer hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors">
                   Sign Up
                 </Button>
               </form>

@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/link-passhref */
+import Link from "next/link";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -7,11 +9,17 @@ export default function Footer() {
         <div className={`${styles.footerContent} whiteTextColor`}>
           <section className={styles.leftSection}>
             <ul>
-              <li>
-                Why <span className="fontGeorgia"> The Mangl&eacute;s</span>?
-              </li>
-              <li>Be an author</li>
-              <li>Community</li>
+              <Link href="/apps/about">
+                <li>
+                  Why <span className="fontGeorgia"> The Mangl&eacute;s</span>?
+                </li>
+              </Link>
+              <Link href="/apps/about">
+                <li>Be an author</li>
+              </Link>
+              <Link href="/apps/about">
+                <li>Community</li>
+              </Link>
               <li>FAQ</li>
             </ul>
           </section>

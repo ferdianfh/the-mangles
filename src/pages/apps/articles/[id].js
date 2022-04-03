@@ -124,7 +124,9 @@ export default function ArticleDetails() {
           })}
 
           <div className={styles.additionalInfo}>
-            <h2 className="primaryTextColor fontGeorgia">Author Profile</h2>
+            <h2 className="primaryTextColor fontGeorgia">
+              Author&apos;s Profile
+            </h2>
 
             {articles.map((article, id) => {
               if (article.id === convertedId)
@@ -156,7 +158,7 @@ export default function ArticleDetails() {
             })}
 
             <Button
-              className={`${styles.btnAuthor} secondaryBgColor whiteTextColor shadow-md`}
+              className={`${styles.btnAuthor} secondaryBgColor whiteTextColor shadow-md hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors`}
             >
               Follow
             </Button>

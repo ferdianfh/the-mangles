@@ -17,7 +17,8 @@ export default function CardArticleLg({
     <>
       <div className={styles.articleCardLg}>
         <Image
-          className={styles.articlePictureLg}
+          onClick={action}
+          className={`${styles.articlePictureLg} hover:cursor-pointer`}
           src={imageArticle}
           alt="articleImage"
           width={255}
@@ -34,9 +35,9 @@ export default function CardArticleLg({
             </p>
           </div>
 
-          <div className={styles.articleAuthorLg}>
+          <div className={`${styles.articleAuthorLg}  hover:cursor-pointer`}>
             <Image
-              className={styles.authorPictureLg}
+              className={`${styles.authorPictureLg}`}
               src={authorPicture}
               alt="author"
               width={27}

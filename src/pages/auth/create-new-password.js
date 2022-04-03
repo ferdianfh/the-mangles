@@ -34,7 +34,7 @@ export default function ResetPassword() {
                 <Input
                   type="password"
                   placeholder="Enter your new password"
-                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md outline-none focus-within:border-[#bfa2db]"
+                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 w-full bg-white placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md focus:outline-none focus:border-[#bfa2db] focus:ring-[#bfa2db] focus:ring-1"
                   id="email"
                 />
 
@@ -44,11 +44,11 @@ export default function ResetPassword() {
                 <Input
                   type="password"
                   placeholder="Confirm your new password"
-                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md outline-none focus-within:border-[#bfa2db]"
+                  className="fontAvenir text-base py-2 px-5 mt-1 mb-6 w-full bg-white placeholder:text-[#7f7c82] border border-[#0d253c] rounded-md focus:outline-none focus:border-[#bfa2db] focus:ring-[#bfa2db] focus:ring-1"
                   id="confirmPassword"
                 />
 
-                <Button className="secondaryBgColor fontAvenir text-white text-base font-bold mt-24 px-8 py-3 rounded-md cursor-pointer hover:bg-purple-400 active:bg-purple-500">
+                <Button className="secondaryBgColor fontAvenir text-white text-base font-bold mt-24 px-8 py-3 rounded-md cursor-pointer hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors">
                   Create New Password
                 </Button>
               </form>

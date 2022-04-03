@@ -30,8 +30,8 @@ export default function Categories() {
       <main className="main">
         <section className="heroSection tertiaryBgColor">
           <div className="heroTitleWrapper">
-            <h1 className="title fontGeorgia primaryTextColor">
-              Choose Article by Category
+            <h1 className="title fontGeorgia primaryTextColor text-7xl">
+              Choose Article by Category.
             </h1>
             <p className="subtitle primaryTextColor">
               Category helps you to read another article that you <br /> haven’t
@@ -108,7 +108,7 @@ export default function Categories() {
                       onClick={() =>
                         router.push(`/apps/categories/${category.codeCategory}`)
                       }
-                      className={`${styles.btnExploreCategory} secondaryBgColor whiteTextColor hover:bg-purple-400 active:bg-purple-500 transition-colors`}
+                      className={`${styles.btnExploreCategory} secondaryBgColor whiteTextColor hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors`}
                     >
                       Explore Category
                     </Button>

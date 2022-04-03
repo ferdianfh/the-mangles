@@ -30,8 +30,8 @@ export default function Home() {
       <main className="main">
         <section className="heroSection quinaryBgColor">
           <div className="heroTitleWrapper">
-            <h1 className="title fontGeorgia primaryTextColor">
-              Share Information <br /> and Educate People
+            <h1 className="title fontGeorgia primaryTextColor text-7xl ">
+              Share Information <br /> and Educate People.
             </h1>
             <p className="subtitle primaryTextColor">
               Everyone has their point of view of something, but just <br />{" "}
@@ -40,7 +40,7 @@ export default function Home() {
             </p>
             <Button
               onClick={() => router.push("/apps/articles")}
-              className="btnHero secondaryBgColor whiteTextColor fontAvenir shadow-md hover:bg-purple-400 active:bg-purple-500 transition-colors"
+              className="btnHero secondaryBgColor whiteTextColor fontAvenir shadow-md hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors"
             >
               Start Exploring
             </Button>
@@ -107,7 +107,9 @@ export default function Home() {
             </p>
 
             <div className={styles.tagsWrapper}>
-              <span className="secondaryBgColor whiteTextColor">#cats</span>
+              <span className="secondaryBgColor whiteTextColor hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors">
+                #cats
+              </span>
               <span className="secondaryBgColor whiteTextColor">#seblak</span>
               <span className="secondaryBgColor whiteTextColor">#foodie</span>
               <span className="secondaryBgColor whiteTextColor">
