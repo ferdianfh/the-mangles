@@ -29,7 +29,7 @@ export default function Articles() {
             <h1 className="title fontGeorgia primaryTextColor text-7xl">
               Start Writing Your <br /> Own Articles.
             </h1>
-            <p className="subtitle primaryTextColor">
+            <p className="subtitle text-xl primaryTextColor">
               You can be an author by being active in reading articles <br /> in
               a month or you can request to be an author if you <br /> have been
               a member for three months.

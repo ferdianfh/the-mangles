@@ -33,7 +33,7 @@ export default function Categories() {
             <h1 className="title fontGeorgia primaryTextColor text-7xl">
               Choose Article by Category.
             </h1>
-            <p className="subtitle primaryTextColor">
+            <p className="subtitle text-xl primaryTextColor">
               Category helps you to read another article that you <br /> haven’t
               thought before. You able to read all articles for free. <br />{" "}
               Enjoy the reading!

@@ -33,10 +33,10 @@ export default function Home() {
             <h1 className="title fontGeorgia primaryTextColor text-7xl ">
               Share Information <br /> and Educate People.
             </h1>
-            <p className="subtitle primaryTextColor">
-              Everyone has their point of view of something, but just <br />{" "}
-              don’t be afraid to express the facts. Be an author and <br />{" "}
-              share you prespective of something to the world.
+            <p className="subtitle text-xl primaryTextColor">
+              Everyone has their own point of view, stories, <br /> opinians,
+              and ideas. Share your unique perspective <br /> to the world and
+              help other people write their own stories.
             </p>
             <Button
               onClick={() => router.push("/apps/articles")}
@@ -80,7 +80,9 @@ export default function Home() {
 
         <section className={styles.recommendSection}>
           <div className={styles.recommend}>
-            <h2 className="primaryTextColor fontGeorgia">Recommendation</h2>
+            <h2 className="primaryTextColor fontGeorgia">
+              Recommended For You
+            </h2>
 
             <div className={styles.recommendArticlesWrapper}>
               {articles.map((article) => {
@@ -179,9 +181,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.topAuthor}>
-            <h2 className="primaryTextColor fontGeorgia">
-              Top Authors This Month
-            </h2>
+            <h2 className="primaryTextColor fontGeorgia">Who To Follow</h2>
 
             <div className={styles.topAuthorsWrapper}>
               <div className={styles.authorDetails}>
