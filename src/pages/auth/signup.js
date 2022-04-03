@@ -32,14 +32,14 @@ export default function Signup() {
               </p>
 
               <form className=" flex flex-col px-4">
-                <label className="font-bold text-sm" htmlFor="fullname">
-                  Full Name:{" "}
+                <label className="font-bold text-sm" htmlFor="username">
+                  Username:{" "}
                 </label>
                 <Input
                   type="text"
                   placeholder="Enter your name"
                   className="fontAvenir text-base py-2 px-5 mt-1 mb-6 bg-white placeholder:text-[#7f7c82] w-full border border-[#0d253c] rounded-md focus:outline-none focus:border-[#bfa2db] focus:ring-[#bfa2db] focus:ring-1"
-                  id="fullname"
+                  id="username"
                 />
 
                 <label className="font-bold text-sm" htmlFor="email">
