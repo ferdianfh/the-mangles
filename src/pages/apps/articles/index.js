@@ -34,7 +34,7 @@ export default function Articles() {
               a month or you can request to be an author if you <br /> have been
               a member for three months.
             </p>
-            <Button className="btnHero secondaryBgColor whiteTextColor fontAvenir hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors">
+            <Button className="btnHero secondaryBgColor whiteTextColor text-xl px-14 py-4 fontAvenir hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors">
               Start Writing
             </Button>
           </div>

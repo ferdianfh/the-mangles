@@ -40,7 +40,7 @@ export default function Home() {
             </p>
             <Button
               onClick={() => router.push("/apps/articles")}
-              className="btnHero secondaryBgColor whiteTextColor fontAvenir shadow-md hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors"
+              className="btnHero secondaryBgColor whiteTextColor fontAvenir text-xl px-10 py-4 shadow-md hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors"
             >
               Start Exploring
             </Button>
