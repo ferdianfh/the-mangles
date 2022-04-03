@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/link-passhref */
 import Link from "next/link";
 import styles from "./Footer.module.css";
+import logo from "../../assets/logoSm.png";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -24,7 +26,12 @@ export default function Footer() {
             </ul>
           </section>
           <section className={styles.rightSection}>
-            <h2 className="fontGeorgia">The Mangl&eacute;s</h2>
+            <div className="flex flex-row justify-end align-middle">
+              <div className="self-center">
+                <Image src={logo} alt="logo" width={32} height={32} />
+              </div>
+              <h2 className="fontGeorgia ml-3">The Mangl&eacute;s</h2>
+            </div>
             <p className="">
               {" "}
               Jendral Sudirman Street No. 23 <br /> Jakarta, Indonesia

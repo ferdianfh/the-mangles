@@ -92,8 +92,12 @@ export default function Navbar({ heroColor, activePage }) {
               </div>
             ) : (
               <div className={styles.profileNotifWrapper}>
-                <BiBell className={styles.notifIcon} />
-                <div className={styles.navProfileWrapper}>
+                <BiBell
+                  className={`${styles.notifIcon} hover:text-gloomyPurpleHover hover:cursor-pointer`}
+                />
+                <div
+                  className={`${styles.navProfileWrapper} hover:cursor-pointer hover:border-gloomyPurpleHover`}
+                >
                   <Image
                     className={styles.navProfile}
                     src={blankProfile}
