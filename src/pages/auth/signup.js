@@ -37,7 +37,7 @@ export default function Signup() {
                 </label>
                 <Input
                   type="text"
-                  placeholder="Enter your name"
+                  placeholder="Enter your username"
                   className="fontAvenir text-base py-2 px-5 mt-1 mb-6 bg-white placeholder:text-[#7f7c82] w-full border border-[#0d253c] rounded-md focus:outline-none focus:border-[#bfa2db] focus:ring-[#bfa2db] focus:ring-1"
                   id="username"
                 />
