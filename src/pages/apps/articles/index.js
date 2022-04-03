@@ -1,7 +1,7 @@
 import Header from "../../../components/Header";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
-import styles from "../../../styles/Articles.module.css";
+import styles from "../../../styles/apps/Articles.module.css";
 import Button from "../../../components/base/Button";
 import Image from "next/image";
 import illustration2 from "../../../assets/SprintingDoodle.png";
@@ -34,7 +34,7 @@ export default function Articles() {
               a month or you can request to be an author if you <br /> have been
               a member for three months.
             </p>
-            <Button className="btnHero secondaryBgColor whiteTextColor text-xl px-14 py-4 fontAvenir hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors">
+            <Button className="btnHero secondaryBgColor whiteTextColor text-xl px-14 py-4 mt-4 fontAvenir hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors">
               Start Writing
             </Button>
           </div>

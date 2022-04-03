@@ -2,7 +2,7 @@ import Image from "next/image";
 import Header from "../../../components/Header";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
-import styles from "../../../styles/Categories.module.css";
+import styles from "../../../styles/apps/Categories.module.css";
 import illustration3 from "../../../assets/MessyDoodle.png";
 import { categories } from "../../../helpers/arrayCategories";
 import CardCategory from "../../../components/CardCategory";

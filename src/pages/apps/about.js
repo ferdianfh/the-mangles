@@ -1,11 +1,10 @@
 import Link from "next/link";
 import React from "react";
-import Accordion from "../../components/Accordion";
 import Button from "../../components/base/Button";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
-import styles from "../../styles/About.module.css";
+import styles from "../../styles/apps/About.module.css";
 import logo from "../../assets/logo.png";
 import Image from "next/image";
 

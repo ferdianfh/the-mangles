@@ -6,7 +6,7 @@ import Navbar from "../../../components/Navbar";
 import { articles } from "../../../helpers/arrayArticles";
 import { categories } from "../../../helpers/arrayCategories";
 import CardArticleLg from "../../../components/CardArticleLg";
-import styles from "../../../styles/ArticlesByCategory.module.css";
+import styles from "../../../styles/apps/ArticlesByCategory.module.css";
 import { IoPricetags } from "react-icons/io5";
 import Image from "next/image";
 import author from "../../../assets/profile.jpg";

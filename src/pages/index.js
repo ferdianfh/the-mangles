@@ -40,7 +40,7 @@ export default function Home() {
             </p>
             <Button
               onClick={() => router.push("/apps/articles")}
-              className="btnHero secondaryBgColor whiteTextColor fontAvenir text-xl px-10 py-4 shadow-md hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors"
+              className="btnHero secondaryBgColor whiteTextColor fontAvenir text-xl px-10 py-4 mt-4 shadow-md hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors"
             >
               Start Exploring
             </Button>
@@ -138,15 +138,15 @@ export default function Home() {
 
         <section className={`${styles.videoSection} quinaryBgColor`}>
           <div className={styles.videoDescWrapper}>
-            <h2 className="primaryTextColor fontGeorgia">
+            <h2 className="primaryTextColor fontGeorgia text-3xl">
               A Wakanda Civilian Declaring A War <br /> Throughout The Internet
               Multiverse
             </h2>
-            <p className="primaryTextColor">
+            <p className="primaryTextColor text-lg">
               See how brave this young man declaring a war to <br /> the entire
               internet citizen and read the full story below.
             </p>
-            <Button className="btnHero secondaryBgColor whiteTextColor fontAvenir">
+            <Button className="btnHero secondaryBgColor whiteTextColor fontAvenir px-7 py-3 text-lg shadow-md hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors">
               Read Full Article
             </Button>
           </div>
