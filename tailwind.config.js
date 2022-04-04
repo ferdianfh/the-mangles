@@ -17,6 +17,8 @@ module.exports = {
         gloomyPurpleActive: "#976dbe",
         softPurple: "#f7dbf0",
         veryDarkBlue: "#0d253c",
+        veryDarkBlueHover: "#071624",
+        veryDarkBlueActive: "#01090f",
         veryPeachy: "#fcd2d7",
         gloomyTeal: "#caf7e3",
         gloomyGrayForText: "#7f7c82"

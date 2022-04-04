@@ -1,4 +1,6 @@
 import authorPic from "../assets/profile.jpg";
+import author2 from "../assets/profile2.jpg";
+import author3 from "../assets/profile3.jpg";
 import articlePic1 from "../assets/articleCats.jpg";
 import articlePic2 from "../assets/articleFoods.jpg";
 import articlePic3 from "../assets/articlePlants.jpg";
@@ -19,6 +21,7 @@ export const articles = [
       "If your cat often looks at you with a 'stank face', they probably hate you. Find out more!",
     imageArticle: articlePic1,
     author: "Ferdi Ferdiana",
+    authorUsername: "ferdianfh",
     authorPicture: authorPic,
     content: {
       paragraf1:
@@ -38,6 +41,7 @@ export const articles = [
       "Seblak has been around as long as you can remember. What's the secret?",
     imageArticle: articlePic2,
     author: "Ferdi Ferdiana",
+    authorUsername: "ferdianfh",
     authorPicture: authorPic,
     content: {
       paragraf1:
@@ -56,8 +60,9 @@ export const articles = [
     descriptionArticle:
       "Plant 1000 trees everyday will help rain forest produce more oxygen in 50 years.",
     imageArticle: articlePic3,
-    author: "Ferdi Ferdiana",
-    authorPicture: authorPic,
+    author: "Ferdinand Sibelaga",
+    authorUsername: "ferdisibelaga__",
+    authorPicture: author2,
     content: {
       paragraf1:
         "They help keep our climate stable, absorbing carbon dioxide and releasing oxygen, and they regulate our water supply and improves its quality. They also provide a home to more than half of all species found on land – a rich variety of life that keeps so many natural systems running.",
@@ -76,6 +81,7 @@ export const articles = [
       "Rendang has been declared as the most delicious dish in the world!",
     imageArticle: articlePic4,
     author: "Ferdi Ferdiana",
+    authorUsername: "ferdianfh",
     authorPicture: authorPic,
     content: {
       paragraf1:
@@ -94,8 +100,9 @@ export const articles = [
     descriptionArticle:
       "A story about a 13 years old girl who's turning into- oops! Spoiler Alert!",
     imageArticle: articlePic5,
-    author: "Ferdi Ferdiana",
-    authorPicture: authorPic,
+    author: "Ferdhie Van Thesan",
+    authorUsername: "vanthesan",
+    authorPicture: author3,
     content: {
       paragraf1:
         "A quirky Asian teenager transforms into a giant red panda whenever she gets excited … even the premise gives me pause. Which makes the task of reviewing the new Disney/Pixar film “Turning Red” (on Disney+ March 11) especially tricky. Because that’s the idea behind this sometimes heartwarming but wayward coming-of-age movie, which toes the line between truthfully representing a Chinese family, flaws and all, and indulging stereotypes.",
@@ -114,6 +121,7 @@ export const articles = [
       "Huskies are usually so talkative. That is a sign of evolution.",
     imageArticle: articlePic6,
     author: "Ferdi Ferdiana",
+    authorUsername: "ferdianfh",
     authorPicture: authorPic,
     content: {
       paragraf1:

@@ -112,6 +112,7 @@
 }
 .authorImg {
   border-radius: 50%;
+  object-fit: cover;
 }
 .authorInfo {
   display: flex;

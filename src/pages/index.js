@@ -13,6 +13,7 @@ import CardArticleLg from "../components/CardArticleLg";
 import CardArticleSm from "../components/CardArticleSm";
 import author from "../assets/profile.jpg";
 import { useRouter } from "next/router";
+import { authors } from "../helpers/arrayAuthor";
 
 export default function Home() {
   const router = useRouter();
@@ -188,25 +189,36 @@ export default function Home() {
             <h2 className="primaryTextColor fontGeorgia">Who To Follow</h2>
 
             <div className={styles.topAuthorsWrapper}>
-              <div className={styles.authorDetails}>
-                <div>
-                  <Image
-                    className={styles.authorImg}
-                    src={author}
-                    alt="TopAuthor"
-                    width={57}
-                    height={57}
-                  />
-                </div>
+              {authors.map((author) => {
+                return (
+                  <div
+                    onClick={() =>
+                      router.push(`/apps/authors/${author.authorUsername}`)
+                    }
+                    key={author.authorId}
+                    className={`${styles.authorDetails} mb-3`}
+                  >
+                    <div>
+                      <Image
+                        className={styles.authorImg}
+                        src={author.authorPic}
+                        alt="TopAuthor"
+                        width={57}
+                        height={57}
+                      />
+                    </div>
 
-                <div className={styles.authorInfo}>
-                  <p className={styles.authorName}>Ferdi Ferdiana</p>
-                  <p className={`${styles.authorAbout} tertiaryTextColor`}>
-                    I usually code with JavaScript, but sometimes i write
-                    article to escape.
-                  </p>
-                </div>
-              </div>
+                    <div className={styles.authorInfo}>
+                      <p className={styles.authorName}>{author.authorName}</p>
+                      <p
+                        className={`${styles.authorAbout} tertiaryTextColor truncate`}
+                      >
+                        {author.bio}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
