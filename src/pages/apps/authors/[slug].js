@@ -1,6 +1,4 @@
 import Image from "next/image";
-import React from "react";
-import Footer from "../../../components/Footer";
 import Header from "../../../components/Header";
 import Navbar from "../../../components/Navbar";
 import styles from "../../../styles/apps/Author.module.css";
@@ -15,11 +13,16 @@ export default function Author() {
   const { slug } = router.query;
   return (
     <>
-      <Header
-        title="The Mangl&eacute;s | Share Information and Educate People"
-        description="Share Information and Educate People"
-        keywords="The Mangles, News Web Apps, news, articles"
-      />
+      {articles.map((article) => {
+        if (article.authorUsername === slug)
+          return (
+            <Header
+              title={`${article.author} (${article.authorUsername}) - The Mangles`}
+              description="Share Information and Educate People"
+              keywords="The Mangles, News Web Apps, news, articles"
+            />
+          );
+      })}
 
       <Navbar />
 
@@ -51,6 +54,9 @@ export default function Author() {
                     <p className=" m-0 mt-4 text-3xl text-veryDarkBlue">
                       {author.authorName}
                     </p>
+                    <p className="m-0 text-veryDarkBlue">
+                      @{author.authorUsername}
+                    </p>
                     <div className="flex flex-row text-gloomyGrayForText text-lg mt-0">
                       <p className="mr-4">{author.totalPosts} Posts</p>
                       <p>{author.totalFollowers} Followers</p>
@@ -60,7 +66,8 @@ export default function Author() {
                 );
             })}
           </div>
-          <div className={`${styles.authorPosts} px-6 py-8`}>
+
+          <div className={`${styles.authorPosts} px-12 py-8`}>
             <h2 className="m-0 fontGeorgia text-3xl text-veryDarkBlue">
               Author&apos;s Posts
             </h2>
@@ -84,8 +91,6 @@ export default function Author() {
           </div>
         </section>
       </main>
-
-      {/* <Footer /> */}
     </>
   );
 }

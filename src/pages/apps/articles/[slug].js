@@ -9,6 +9,8 @@ import { BsBookmark, BsCircleFill, BsLink45Deg } from "react-icons/bs";
 import { IoIosArrowBack } from "react-icons/io";
 import { FiSend } from "react-icons/fi";
 import Button from "../../../components/base/Button";
+import CardAuthor from "../../../components/CardAuthor";
+import { authors } from "../../../helpers/arrayAuthor";
 
 export default function ArticleDetails() {
   const router = useRouter();
@@ -44,7 +46,7 @@ export default function ArticleDetails() {
                       <div className={styles.authorDateWrapper}>
                         <div className={styles.articleAuthorLg}>
                           <Image
-                            className={styles.authorPictureLg}
+                            className={`${styles.authorPictureLg} object-cover`}
                             src={article.authorPicture}
                             alt="author"
                             width={42}
@@ -64,12 +66,6 @@ export default function ArticleDetails() {
                         >
                           {article.createdAt}
                         </p>
-
-                        {/* <div className={styles.iconWrapper}>
-                          <BsCircleFill
-                            className={`${styles.separateIcon} tertiaryTextColor`}
-                          />
-                        </div> */}
                       </div>
 
                       <div className={styles.iconWrapper}>
@@ -132,36 +128,31 @@ export default function ArticleDetails() {
               if (article.titleArticle === slug)
                 return (
                   <div className={styles.topAuthorsWrapper}>
-                    <div className={styles.authorDetails}>
-                      <div>
-                        <Image
-                          className={styles.authorImg}
-                          src={article.authorPicture}
-                          alt="TopAuthor"
-                          width={57}
-                          height={57}
-                        />
-                      </div>
-
-                      <div className={styles.authorInfo}>
-                        <p className={styles.authorName}>{article.author}</p>
-                        <p
-                          className={`${styles.authorAbout} tertiaryTextColor`}
-                        >
-                          I usually code with JavaScript, but sometimes i write
-                          article to escape.
-                        </p>
-                      </div>
-                    </div>
+                    {authors.map((author) => {
+                      if (author.authorName === article.author)
+                        return (
+                          <CardAuthor
+                            key={author.authorId}
+                            action={() =>
+                              router.push(
+                                `/apps/authors/${author.authorUsername}`
+                              )
+                            }
+                            authorName={author.authorName}
+                            authorPic={author.authorPic}
+                            bio={author.bio}
+                          />
+                        );
+                    })}
                   </div>
                 );
             })}
 
-            <Button
+            {/* <Button
               className={`${styles.btnAuthor} secondaryBgColor whiteTextColor shadow-md hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors`}
             >
               Follow
-            </Button>
+            </Button> */}
           </div>
         </section>
       </main>

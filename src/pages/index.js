@@ -14,6 +14,7 @@ import CardArticleSm from "../components/CardArticleSm";
 import author from "../assets/profile.jpg";
 import { useRouter } from "next/router";
 import { authors } from "../helpers/arrayAuthor";
+import CardAuthor from "../components/CardAuthor";
 
 export default function Home() {
   const router = useRouter();
@@ -198,32 +199,15 @@ export default function Home() {
             <div className={`${styles.topAuthorsWrapper} `}>
               {authors.map((author) => {
                 return (
-                  <div
-                    onClick={() =>
+                  <CardAuthor
+                    key={author.authorId}
+                    action={() =>
                       router.push(`/apps/authors/${author.authorUsername}`)
                     }
-                    key={author.authorId}
-                    className={`${styles.authorDetails} mb-3`}
-                  >
-                    <div>
-                      <Image
-                        className={styles.authorImg}
-                        src={author.authorPic}
-                        alt="TopAuthor"
-                        width={57}
-                        height={57}
-                      />
-                    </div>
-
-                    <div className={styles.authorInfo}>
-                      <p className={styles.authorName}>{author.authorName}</p>
-                      <p
-                        className={`${styles.authorAbout} tertiaryTextColor truncate`}
-                      >
-                        {author.bio}
-                      </p>
-                    </div>
-                  </div>
+                    authorName={author.authorName}
+                    authorPic={author.authorPic}
+                    bio={author.bio}
+                  />
                 );
               })}
             </div>
