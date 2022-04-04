@@ -25,7 +25,7 @@ export default function Author() {
 
       <main className="main">
         <section className="h-full w-full flex flex-row  px-16">
-          <div className={`${styles.authorProfile} pr-4 py-8 sticky  `}>
+          <div className={`${styles.authorProfile} pr-8 py-8 sticky  `}>
             {authors.map((author) => {
               if (author.authorUsername === slug)
                 return (
@@ -48,7 +48,10 @@ export default function Author() {
                         </Button>
                       </div>
                     </div>
-                    <div className="flex flex-row text-gloomyGrayForText text-lg">
+                    <p className=" m-0 mt-4 text-3xl text-veryDarkBlue">
+                      {author.authorName}
+                    </p>
+                    <div className="flex flex-row text-gloomyGrayForText text-lg mt-0">
                       <p className="mr-4">{author.totalPosts} Posts</p>
                       <p>{author.totalFollowers} Followers</p>
                     </div>

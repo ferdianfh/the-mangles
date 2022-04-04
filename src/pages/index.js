@@ -92,6 +92,9 @@ export default function Home() {
                     action={() =>
                       router.push(`/apps/articles/${article.titleArticle}`)
                     }
+                    action2={() =>
+                      router.push(`/apps/authors/${article.authorUsername}`)
+                    }
                     key={article.id}
                     imageArticle={article.imageArticle}
                     titleArticle={article.titleArticle}
@@ -173,6 +176,9 @@ export default function Home() {
                       action={() =>
                         router.push(`/apps/articles/${article.titleArticle}`)
                       }
+                      action2={() =>
+                        router.push(`/apps/authors/${article.authorUsername}`)
+                      }
                       key={article.id}
                       imageArticle={article.imageArticle}
                       titleArticle={article.titleArticle}
@@ -185,10 +191,11 @@ export default function Home() {
               })}
             </div>
           </div>
-          <div className={styles.topAuthor}>
+
+          <div className={`${styles.topAuthor} px-6 py-8`}>
             <h2 className="primaryTextColor fontGeorgia">Who To Follow</h2>
 
-            <div className={styles.topAuthorsWrapper}>
+            <div className={`${styles.topAuthorsWrapper} `}>
               {authors.map((author) => {
                 return (
                   <div

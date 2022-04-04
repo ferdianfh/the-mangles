@@ -55,6 +55,9 @@ export default function Articles() {
                   action={() =>
                     router.push(`/apps/articles/${article.titleArticle}`)
                   }
+                  action2={() =>
+                    router.push(`/apps/authors/${article.authorUsername}`)
+                  }
                   key={article.id}
                   imageArticle={article.imageArticle}
                   titleArticle={article.titleArticle}

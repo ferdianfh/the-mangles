@@ -11,6 +11,7 @@ export default function CardArticleLg({
   author,
   createdAt,
   action,
+  action2,
   ...props
 }) {
   return (
@@ -35,7 +36,10 @@ export default function CardArticleLg({
             </p>
           </div>
 
-          <div className={`${styles.articleAuthorLg}  hover:cursor-pointer`}>
+          <div
+            onClick={action2}
+            className={`${styles.articleAuthorLg}  hover:cursor-pointer`}
+          >
             <Image
               className={`${styles.authorPictureLg}`}
               src={authorPicture}

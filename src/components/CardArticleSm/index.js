@@ -9,6 +9,7 @@ export default function CardArticleSm({
   author,
   createdAt,
   action,
+  action2,
   ...props
 }) {
   return (
@@ -22,7 +23,7 @@ export default function CardArticleSm({
             {descriptionArticle}
           </p>
         </div>
-        <div className={styles.articleAuthor}>
+        <div onClick={action2} className={styles.articleAuthor}>
           <Image
             className={styles.authorPicture}
             src={authorPicture}
