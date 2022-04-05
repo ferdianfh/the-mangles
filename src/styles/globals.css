@@ -131,3 +131,19 @@ button {
   display: flex;
   flex-direction: column;
 }
+
+.leftSideProfile {
+  flex: 1;
+  height: 100vh;
+  border-right: 1px solid #0d253c;
+  top: 12vh;
+  z-index: 1;
+}
+.rightSideProfile {
+  flex: 2;
+}
+
+.editorWrapper {
+  top: -2.5em !important;
+  right: -2em;
+}

@@ -96,7 +96,12 @@ export default function Navbar({ heroColor, activePage }) {
                   className={`${styles.notifIcon} hover:text-gloomyPurpleHover hover:cursor-pointer`}
                 />
                 <div
-                  className={`${styles.navProfileWrapper} hover:cursor-pointer hover:border-gloomyPurpleHover`}
+                  onClick={() => router.push("/apps/profile")}
+                  className={
+                    activePage === "profile"
+                      ? ` ${styles.navProfileWrapper} bg-gloomyPurpleActive hover:cursor-pointer`
+                      : `${styles.navProfileWrapper} hover:cursor-pointer hover:border-gloomyPurpleHover`
+                  }
                 >
                   <Image
                     className={styles.navProfile}
