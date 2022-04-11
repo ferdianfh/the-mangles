@@ -29,7 +29,7 @@
 
 ![The Mangles Landing Page](./src/assets/snippets/landing-page.png)
 
-**The Mangles** is A Website Based Application for Reading, Writing, and Publishing either News or Articles to help people expressing their thoughts, imagination, and ideas.
+**The Mangl&eacute;s** is A Website Based Application for Reading, Writing, and Publishing either News or Articles to help people expressing their thoughts, imagination, and ideas.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -71,7 +71,7 @@ This app was built with some technologies
 
 ## Demonstration
 
-Or you can try it here: [Zwallet Web App](https://themangles.vercel.app)
+Or you can try it here: [The Mangl&eacute;s Web App](https://themangles.vercel.app)
 
 ## Snippets
 
@@ -95,7 +95,7 @@ Here are some snippets about this app:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## The Mangles Update!
+## The Mangl&eacute;s Update!
 
 **The Mangl&eacute;s** is currently on development process!
 
