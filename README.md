@@ -27,7 +27,7 @@
 
 ## About The Project
 
-![The Mangles Landing Page]("./src/assets/snippets/landing-page.png")
+![The Mangles Landing Page](/src/assets/snippets/landing-page.png)
 
 **The Mangles** is A Website Based Application for Reading, Writing, and Publishing either News or Articles to help people expressing their thoughts, imagination, and ideas.
 
