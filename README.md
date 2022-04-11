@@ -27,7 +27,7 @@
 
 ## About The Project
 
-![The Mangles Landing Page](./src/assets/snippets/landing-page.png)
+![The Mangles Landing Page]("./src/assets/snippets/landing-page.png")
 
 **The Mangles** is A Website Based Application for Reading, Writing, and Publishing either News or Articles to help people expressing their thoughts, imagination, and ideas.
 
@@ -37,11 +37,10 @@
 
 This app was built with some technologies
 
-- [ReactJS](https://reactjs.org/)
-- [Redux](https://redux.js.org/)
+- [NextJS](https://reactjs.org/)
 - [Axios](https://axios-http.com/)
-- [Bootstrap](https://getbootstrap.com)
-- [Netlify](https://www.netlify.com/)
+- [Tailwind CSS](https://getbootstrap.com)
+- [Vercel](https://www.netlify.com/)
 - [Backend APIs](https://github.com/ferdianfh/RESTful-API-with-ExpressJS)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -82,7 +81,7 @@ Here are some snippets about this app:
 
 |                      Landing Page                       |   Landing Page Mobile    |
 | :-----------------------------------------------------: | :----------------------: |
-| ![Landing Page](./src/assets/snippets/landing-page.png) | ![Mobile Landing Page]() |
+| ![Landing Page](./src/assets/snippets/landing-page.png) |          ![]()           |
 |                    Registration Page                    | Registration Page Mobile |
 | ![Registration Page](./src/assets/snippets/signup.png)  |          ![]()           |
 |                        Home Page                        |     Home Page Mobile     |
