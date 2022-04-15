@@ -26,3 +26,15 @@
   margin: 0;
 }
 /* ----------------------- author card end here ---------------------- */
+
+@media screen and (max-width: 628px) {
+  .authorName {
+  
+    font-size: 0.9em;
+  
+  }
+  .authorAbout {
+    font-size: 0.875em;
+   
+  }
+}

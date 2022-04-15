@@ -207,6 +207,8 @@ export default function Home() {
                   );
               })}
             </div>
+
+            <div className={`${styles.latestNewsWrapper}  `}>he</div>
           </div>
 
           <div className={`${styles.topAuthor} px-6 py-8 sml:p-0 `}>
