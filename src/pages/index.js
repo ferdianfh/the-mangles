@@ -32,34 +32,46 @@ export default function Home() {
       <main className="main">
         <section className="heroSection quinaryBgColor">
           <div className="heroTitleWrapper">
-            <h1 className="title fontGeorgia text-black text-7xl ">
+            <h1 className="title fontGeorgia text-black text-7xl sml:text-4xl sml:mb-8 ">
               Share Information <br /> and Educate People.
             </h1>
-            <p className="subtitle text-xl text-black">
+            <p className="subtitle text-xl text-black sml:hidden">
               Everyone has their own point of view, stories, <br /> opinions,
               and ideas. Share your unique perspective <br /> to the world and
               help other people write their own stories.
             </p>
+
+            {/* text for mobile layout */}
+            <p className="subtitle text-sm text-black sml:block sm:hidden">
+              Share your unique perspective to the world and help other people
+              write their own stories.
+            </p>
+
             <Button
               onClick={() => router.push("/apps/articles")}
-              className="btnHero secondaryBgColor whiteTextColor fontAvenir text-xl px-10 py-4 mt-4 shadow-md hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors"
+              className="btnHero secondaryBgColor whiteTextColor fontAvenir text-xl px-10 py-4 mt-4 shadow-md hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors sml:text-base sml:px-6 sml:py-2  "
             >
               Start Exploring
             </Button>
           </div>
-          <Image
-            className="illustration"
-            src={illustration1}
-            alt="Illustration1"
-            width={560}
-            height={550}
-          />
+          <div className="illustration sml:hidden">
+            <Image
+              src={illustration1}
+              alt="Illustration1"
+              width={560}
+              height={550}
+            />
+          </div>
         </section>
 
         <section className={styles.categorySection}>
           <div className={styles.textWrapper}>
-            <h2 className="primaryTextColor fontGeorgia">Category</h2>
-            <p className={`${styles.link} primaryTextColor fontAvenir`}>
+            <h2 className="primaryTextColor fontGeorgia sml:text-xl ">
+              Category
+            </h2>
+            <p
+              className={`${styles.link} primaryTextColor fontAvenir sml:text-sm sml:underline `}
+            >
               <Link href="/apps/categories">More Like This</Link>
             </p>
           </div>
@@ -82,7 +94,7 @@ export default function Home() {
 
         <section className={styles.recommendSection}>
           <div className={styles.recommend}>
-            <h2 className="primaryTextColor fontGeorgia">
+            <h2 className="primaryTextColor fontGeorgia sml:text-xl ">
               Recommended For You
             </h2>
 
@@ -110,8 +122,10 @@ export default function Home() {
           </div>
 
           <div className={styles.tags}>
-            <h2 className="primaryTextColor fontGeorgia">Popular Tags</h2>
-            <p className="blackTextColor">
+            <h2 className="primaryTextColor fontGeorgia sml:text-xl ">
+              Popular Tags
+            </h2>
+            <p className="blackTextColor sml:text-sm ">
               Explore new topics and satisfy your mind
             </p>
 
@@ -141,7 +155,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.videoSection} quinaryBgColor`}>
+        <section className={`${styles.videoSection} quinaryBgColor  `}>
           <div className={styles.videoDescWrapper}>
             <h2 className="primaryTextColor fontGeorgia text-3xl">
               A Wakanda Civilian Declaring A War <br /> Throughout The Internet
@@ -166,10 +180,12 @@ export default function Home() {
         </section>
 
         <section className={styles.latestArticlesSection}>
-          <div className={styles.latestNews}>
-            <h2 className="primaryTextColor fontGeorgia">Latest News</h2>
+          <div className={`${styles.latestNews}  `}>
+            <h2 className="primaryTextColor fontGeorgia sml:text-xl ">
+              Latest News
+            </h2>
 
-            <div className="">
+            <div className={`${styles.latestNewsWrapper} sml:hidden `}>
               {articles.map((article) => {
                 if (article.id === 3 || article.id === 5 || article.id === 6)
                   return (
@@ -193,8 +209,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={`${styles.topAuthor} px-6 py-8`}>
-            <h2 className="primaryTextColor fontGeorgia">Who To Follow</h2>
+          <div className={`${styles.topAuthor} px-6 py-8 sml:p-0 `}>
+            <h2 className="primaryTextColor fontGeorgia  sml:text-xl  ">
+              Who To Follow
+            </h2>
 
             <div className={`${styles.topAuthorsWrapper} `}>
               {authors.map((author) => {

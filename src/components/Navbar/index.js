@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Button from "../base/Button";
 import styles from "./Navbar.module.css";
-import { BiBell, BiCircle } from "react-icons/bi";
+import { BiBell } from "react-icons/bi";
+import { AiOutlineMenu } from "react-icons/ai";
 import blankProfile from "../../assets/profile.jpg";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -48,8 +49,8 @@ export default function Navbar({ heroColor, activePage }) {
             : `${styles.navbar}`
         }
       >
-        <div className={styles.navbarContent}>
-          <section className={styles.logoSection}>
+        <div className={`${styles.navbarContent} `}>
+          <section className={`${styles.logoSection}`}>
             <h1
               onClick={handleClick}
               className={`${styles.logoTitle} logoTitle fontGeorgia primaryTextColor`}
@@ -57,7 +58,16 @@ export default function Navbar({ heroColor, activePage }) {
               The Mangl&eacute;s
             </h1>
           </section>
-          <section className={`${styles.menuSection} primaryTextColor`}>
+
+          {/* menu for mobile layout */}
+          <section className={`${styles.menuSmSection} sml:block sm:hidden`}>
+            <AiOutlineMenu className="text-xl" />
+          </section>
+
+          {/* menu for big screen layout */}
+          <section
+            className={`${styles.menuSection} primaryTextColor sml:hidden`}
+          >
             <ul>
               <li className={activePage === "home" ? "activePage" : null}>
                 <Link href="/">Home</Link>
@@ -74,7 +84,7 @@ export default function Navbar({ heroColor, activePage }) {
             </ul>
           </section>
 
-          <section className={styles.eventSection}>
+          <section className={`${styles.eventSection} sml:hidden`}>
             {click ? (
               <div className={styles.btnNavbarWrapper}>
                 <Button

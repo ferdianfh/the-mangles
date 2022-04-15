@@ -25,6 +25,21 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 628px) {
+  .categorySection {
+    width: 100%;
+    height: 100%;
+    padding: 2em 1.25em;
+  }
+  .categoryWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
 /* ======================== RECOMMENDATION SECTION ========================= */
 .recommendSection {
   height: 77vh;
@@ -61,6 +76,36 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 628px) {
+  .recommendSection {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #0d253c;
+
+    padding: 2em 1.25em;
+  }
+  .recommend {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .tags {
+    border-left: none;
+    border-top: 1px solid #eeedf0;
+    padding: 0 0;
+  }
+  .tagsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .tagsWrapper span {
+    margin: 0.25em 0.5em;
+  
+  }
+}
+
 /* ======================== ARTICLE VIDEO SECTION ========================= */
 .videoSection {
   height: 60vh;
@@ -80,6 +125,12 @@
 .videoDescWrapper p {
   font-size: 1.055em;
   line-height: 1.5em;
+}
+
+@media screen and (max-width: 628px) {
+  .videoSection {
+    display: none;
+  }
 }
 
 /* ======================== LATEST ARTICLE SECTION ========================= */
@@ -103,31 +154,24 @@
   margin-top: 2em;
 }
 
-/* ----------------------- author card start here ---------------------- */
-.authorDetails {
-  display: flex;
-  flex-direction: row;
-  cursor: pointer;
-}
-.authorImg {
-  border-radius: 50%;
-  object-fit: cover;
-}
-.authorInfo {
-  display: flex;
-  flex-direction: column;
-  margin-left: 0.75em;
+@media screen and (max-width: 628px) {
+  .latestArticlesSection {
+    height: 100%;
+    width: 100%;
+    border-top: none;
+    display: flex;
+    flex-direction: column-reverse;
 
-  width: 225px;
-  height: 78px;
+    padding: 2em 1.25em;
+  }
+  .topAuthor {
+    border-left: none;
+    border-top: 1px solid #eeedf0;
+  }
+  .latestNews {
+    border-top: 1px solid #eeedf0;
+    padding: 0;
+  }
 }
-.authorName {
-  font-weight: bold;
-  font-size: 1.075em;
-  margin: 0.35em 0;
-}
-.authorAbout {
-  font-size: 0.875em;
-  margin: 0;
-}
-/* ----------------------- author card end here ---------------------- */
+
+

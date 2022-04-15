@@ -37,3 +37,26 @@
 .leftSection span {
   font-weight: 700;
 }
+
+@media screen and (max-width: 628px) {
+  .footer {
+    width: 100%;
+    height: 100%;
+  }
+  .footerContent {
+    margin: 0.5em 1.25em;
+  }
+  .leftSection li {
+    font-size: 0.85em;
+  }
+  .rightSection p {
+    font-size: 0.65em;
+  }
+  .rightSection h2 {
+    font-size: 1.1em;
+  }
+  .logoFooter {
+    width: 15px;
+    height: 15px;
+  }
+}

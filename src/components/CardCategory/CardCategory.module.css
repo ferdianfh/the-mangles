@@ -17,3 +17,15 @@
 .categoryName {
   font-weight: bold;
 }
+
+@media screen and (max-width: 628px) {
+  .categoryCard {
+    height: 170px;
+    width: 150px;
+  }
+  .categoryCard:hover {
+    transform: scale(1.1);
+    transition: 0.255s;
+   
+  }
+}

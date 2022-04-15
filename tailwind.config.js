@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        sm: { max: "628px" }
+        sml: { max: "628px" }
       },
       colors: {
         gloomyPurple: "#bfa2db",

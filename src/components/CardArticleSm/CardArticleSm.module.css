@@ -19,7 +19,7 @@
 }
 .articleDesc {
   font-size: 1.057em;
-  font-size: 1.03em;
+  line-height: 1.3em;
 }
 .articleAuthor {
   display: flex;
@@ -49,3 +49,22 @@
   cursor: pointer;
 }
 /* -------------------- article card sm end here -------------- */
+
+@media screen and (max-width: 628px) {
+  .articleCardSm {
+    height: 184px;
+    width: 400px;
+    padding: 0.57em 0;
+    margin: 0.12em 0;
+  }
+  .articleTextSmWrapper {
+    width: 100%;    
+  }
+  .articleTitle {
+    font-size: 1.18em;
+  }
+  .articleDesc {
+    font-size: 0.988em;
+    line-height: 1.3em;
+  }
+}

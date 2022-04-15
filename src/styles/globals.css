@@ -110,7 +110,7 @@ button {
   text-align: left;
 }
 .illustration {
-  flex: 2;
+  flex: 1;
 }
 .title {
   margin: 0;
@@ -125,6 +125,17 @@ button {
   /* margin-top: 2em; */
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 628px) {
+  .heroSection {
+    height: 100%;
+    width: 100%;
+    padding: 12em 1.25em 5em 1.25em;
+  }
+  .heroTitleWrapper {
+    text-align: center;
+  }
 }
 
 .forms {
