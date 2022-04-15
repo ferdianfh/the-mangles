@@ -60,18 +60,25 @@ This app was built with some technologies
    ```sh
    git clone https://github.com/ferdianfh/the-mangles.git
    ```
-2. Install NPM packages
+2. Move to project directory
+   ```sh
+   cd project-app
+   ```
+3. Install NPM packages
    ```sh
    npm install
    ```
-3. Start the Application
+4. Start the Application
    ```sh
-   npm start
+   npm run dev
    ```
+5. Copy the URL and paste in Web Browser
 
 ## Demonstration
 
 Or you can try it here: [The Mangl&eacute;s Web App](https://themangles.vercel.app)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Snippets
 
