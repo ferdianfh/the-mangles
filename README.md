@@ -12,10 +12,10 @@
   <p align="center">
     Share Information and Educate People.
     <br />
-    <a href="https://github.com/ferdianfh/the-mangles"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ferdianfh/the-mangles" target="blank" ><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ferdianfh/the-mangles">View Demo</a>
+    <a href="https://themangles.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/ferdianfh/the-mangles/issues">Report Bug</a>
     ·
