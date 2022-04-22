@@ -45,3 +45,28 @@
   margin: 0.4em 8em 0.4em 0;
   right: -4.78em;
 }
+
+@media screen and  (max-width: 628px) {
+  .listArticlesSection {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .articlesWrapper {
+    flex: 2.8;
+    border-right: none;
+    margin-left: 0;
+    padding: 2em 1.25em;
+  }
+  .searchArticle {
+    flex: 1.2;
+    height: 40vh;
+    width: 100%;
+    position: sticky;
+    top: 12vh;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    background-color: white;
+  }
+}

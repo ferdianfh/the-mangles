@@ -10,6 +10,7 @@ import { articles } from "../../../helpers/arrayArticles";
 import Input from "../../../components/base/Input";
 import { useRouter } from "next/router";
 import { IoSearch, IoClose } from "react-icons/io5";
+import CardArticleMobile from "../../../components/CardArticleMobile";
 
 export default function Articles() {
   const router = useRouter();
@@ -26,29 +27,36 @@ export default function Articles() {
       <main className="main">
         <section className="heroSection quaternaryBgColor">
           <div className="heroTitleWrapper">
-            <h1 className="title fontGeorgia text-black text-7xl">
+            <h1 className="title fontGeorgia text-black text-7xl sml:text-4xl sml:mb-8">
               Start Writing Your <br /> Own Articles.
             </h1>
-            <p className="subtitle text-xl text-black">
+            <p className="subtitle text-xl text-black sml:text-sm ">
               You can be an author by being active in reading articles <br /> in
               a month or you can request to be an author if you <br /> have been
               a member for three months.
             </p>
-            <Button className="btnHero secondaryBgColor whiteTextColor text-xl px-14 py-4 mt-4 fontAvenir hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors">
+            <Button
+              onClick={() => router.push("/apps/articles/editor")}
+              className="btnHero secondaryBgColor whiteTextColor text-xl px-14 py-4 mt-4 fontAvenir hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors sml:text-base sml:px-9 sml:py-3"
+            >
               Start Writing
             </Button>
           </div>
-          <Image
-            className="illustration"
-            src={illustration2}
-            alt="Illustration1"
-            width={560}
-            height={570}
-          />
+          <div className="sml:hidden">
+            <Image
+              className="illustration"
+              src={illustration2}
+              alt="Illustration1"
+              width={560}
+              height={570}
+            />
+          </div>
         </section>
 
-        <section className={styles.listArticlesSection}>
-          <div className={styles.articlesWrapper}>
+        <section
+          className={`${styles.listArticlesSection} sml:flex sml:flex-col-reverse `}
+        >
+          <div className={`${styles.articlesWrapper} sml:hidden `}>
             {articles.map((article) => {
               return (
                 <CardArticleLg
@@ -69,8 +77,32 @@ export default function Articles() {
               );
             })}
           </div>
+
+          <div className={`${styles.articlesWrapper} sm:hidden sml:block `}>
+            {articles.map((article) => {
+              return (
+                <CardArticleMobile
+                  action={() =>
+                    router.push(`/apps/articles/${article.titleArticle}`)
+                  }
+                  action2={() =>
+                    router.push(`/apps/authors/${article.authorUsername}`)
+                  }
+                  key={article.id}
+                  imageArticle={article.imageArticle}
+                  titleArticle={article.titleArticle}
+                  authorPicture={article.authorPicture}
+                  author={article.author}
+                  createdAt={article.createdAt}
+                />
+              );
+            })}
+          </div>
+
           <div className={styles.searchArticle}>
-            <h2 className="primaryTextColor fontGeorgia">Search Article</h2>
+            <h2 className="primaryTextColor fontGeorgia sml:text-lg ">
+              Search Article
+            </h2>
 
             <div>
               <IoSearch className={`${styles.searchIcon} secondaryTextColor`} />
