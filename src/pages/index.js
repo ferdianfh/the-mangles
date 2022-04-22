@@ -1,20 +1,25 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/router";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Button from "../components/base/Button";
+import CardAuthor from "../components/CardAuthor";
 import CardCategory from "../components/CardCategory";
-import styles from "../styles/Home.module.css";
-import illustration1 from "../assets/FloatDoodle.png";
-import { categories } from "../helpers/arrayCategories";
-import { articles } from "../helpers/arrayArticles";
 import CardArticleLg from "../components/CardArticleLg";
 import CardArticleSm from "../components/CardArticleSm";
+import styles from "../styles/Home.module.css";
+import illustration1 from "../assets/FloatDoodle.png";
+import meong from "../assets/articleCats.jpg";
 import author from "../assets/profile.jpg";
-import { useRouter } from "next/router";
 import { authors } from "../helpers/arrayAuthor";
-import CardAuthor from "../components/CardAuthor";
+import { articles } from "../helpers/arrayArticles";
+import { categories } from "../helpers/arrayCategories";
+
+import { BsBookmark } from "react-icons/bs";
+import { AiOutlineLike } from "react-icons/ai";
+import CardArticleMobile from "../components/CardArticleMobile";
 
 export default function Home() {
   const router = useRouter();
@@ -209,7 +214,25 @@ export default function Home() {
             </div>
 
             <div className={`${styles.latestNewsWrapper} sm:hidden sml:block `}>
-              he
+              {articles.map((article) => {
+                if (article.id === 3 || article.id === 5 || article.id === 6)
+                  return (
+                    <CardArticleMobile
+                      action={() =>
+                        router.push(`/apps/articles/${article.titleArticle}`)
+                      }
+                      action2={() =>
+                        router.push(`/apps/authors/${article.authorUsername}`)
+                      }
+                      key={article.id}
+                      imageArticle={article.imageArticle}
+                      titleArticle={article.titleArticle}
+                      authorPicture={article.authorPicture}
+                      author={article.author}
+                      createdAt={article.createdAt}
+                    />
+                  );
+              })}
             </div>
           </div>
 
