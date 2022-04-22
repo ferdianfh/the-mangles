@@ -64,9 +64,12 @@
     height: 40vh;
     width: 100%;
     position: sticky;
-    top: 12vh;
+    top: 10vh;
     padding-left: 1em;
     padding-bottom: 1em;
     background-color: white;
+  }
+  .searchArticle h2 {
+    padding-top: 1.5em;
   }
 }
