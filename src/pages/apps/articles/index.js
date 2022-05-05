@@ -37,7 +37,7 @@ export default function Articles() {
             </p>
             <Button
               onClick={() => router.push("/apps/articles/editor")}
-              className="btnHero secondaryBgColor whiteTextColor text-xl px-14 py-4 mt-4 fontAvenir hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors sml:text-base sml:px-9 sml:py-3"
+              className="btnHero secondaryBgColor whiteTextColor text-xl px-14 py-4 mt-4 fontAvenir hover:bg-gloomyPurpleHover active:bg-gloomyPurpleActive transition-colors sml:text-base sml:px-6 sml:py-2"
             >
               Start Writing
             </Button>
