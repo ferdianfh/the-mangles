@@ -8,3 +8,11 @@
 .authorPosts {
   flex: 2;
 }
+
+@media screen and (max-width:628px) {
+  .authorProfile {
+    border-right: none;
+    border-bottom: 1px solid #eeedf0;
+    top: 1vh;
+  }
+}

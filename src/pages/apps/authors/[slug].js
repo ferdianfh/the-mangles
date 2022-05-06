@@ -6,6 +6,7 @@ import { authors } from "../../../helpers/arrayAuthor";
 import { articles } from "../../../helpers/arrayArticles";
 import { useRouter } from "next/router";
 import CardArticleLg from "../../../components/CardArticleLg";
+import CardArticleMobile from "../../../components/CardArticleMobile";
 import Button from "../../../components/base/Button";
 
 export default function Author() {
@@ -13,10 +14,11 @@ export default function Author() {
   const { slug } = router.query;
   return (
     <>
-      {articles.map((article) => {
+      {articles.map((article, index) => {
         if (article.authorUsername === slug)
           return (
             <Header
+              key={index}
               title={`${article.author} (${article.authorUsername}) - The Mangles`}
               description="Share Information and Educate People"
               keywords="The Mangles, News Web Apps, news, articles"
@@ -27,8 +29,10 @@ export default function Author() {
       <Navbar />
 
       <main className="main">
-        <section className="h-full w-full flex flex-row  px-16">
-          <div className={`${styles.authorProfile} pr-8 py-8 sticky  `}>
+        <section className="h-full w-full flex flex-row  px-16 sml:flex-col sml:px-5 ">
+          <div
+            className={`${styles.authorProfile} pr-8 py-8 sticky sml:pr-0 sml:relative  `}
+          >
             {authors.map((author) => {
               if (author.authorUsername === slug)
                 return (
@@ -67,7 +71,9 @@ export default function Author() {
             })}
           </div>
 
-          <div className={`${styles.authorPosts} px-12 py-8`}>
+          <div
+            className={`${styles.authorPosts} px-12 py-8 sml:hidden md:block `}
+          >
             <h2 className="m-0 fontGeorgia text-3xl text-veryDarkBlue">
               Author&apos;s Posts
             </h2>
@@ -75,6 +81,30 @@ export default function Author() {
               if (article.authorUsername === slug)
                 return (
                   <CardArticleLg
+                    action={() =>
+                      router.push(`/apps/articles/${article.titleArticle}`)
+                    }
+                    key={article.id}
+                    imageArticle={article.imageArticle}
+                    titleArticle={article.titleArticle}
+                    descriptionArticle={article.descriptionArticle}
+                    authorPicture={article.authorPicture}
+                    author={article.author}
+                    createdAt={article.createdAt}
+                  />
+                );
+            })}
+          </div>
+
+          {/* mobile author's posts */}
+          <div className={`${styles.authorPosts} py-8 sml:block md:hidden `}>
+            <h2 className="m-0 mb-6 fontGeorgia text-xl text-veryDarkBlue">
+              Author&apos;s Posts
+            </h2>
+            {articles.map((article) => {
+              if (article.authorUsername === slug)
+                return (
+                  <CardArticleMobile
                     action={() =>
                       router.push(`/apps/articles/${article.titleArticle}`)
                     }
