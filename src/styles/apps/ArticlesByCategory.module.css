@@ -1,13 +1,16 @@
 .articlesCategorySection {
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
+}
+.articleByCategoryWrapper {
+
+  border-right: 1px solid #0d253c;
 }
 .listArticle {
   flex: 2.8;
-  border-right: 1px solid #0d253c;
-  padding: 2em 4em;
+  /* padding: 2em 4em; */
 }
 .categoryTitleWrapper {
   display: flex;

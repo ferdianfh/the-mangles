@@ -75,7 +75,7 @@ export default function Home() {
               Category
             </h2>
             <p
-              className={`${styles.link} primaryTextColor fontAvenir sml:text-sm sml:underline `}
+              className={`${styles.link} primaryTextColor fontAvenir sml:hidden lg:block sml:text-sm sml:underline `}
             >
               <Link href="/apps/categories">More Like This</Link>
             </p>

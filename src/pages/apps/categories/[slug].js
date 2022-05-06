@@ -10,6 +10,7 @@ import styles from "../../../styles/apps/ArticlesByCategory.module.css";
 import { IoPricetags } from "react-icons/io5";
 import Image from "next/image";
 import author from "../../../assets/profile.jpg";
+import CardArticleMobile from "../../../components/CardArticleMobile";
 
 export default function Category() {
   const router = useRouter();
@@ -31,54 +32,116 @@ export default function Category() {
       <Navbar activePage="category" />
 
       <main className="main">
-        <section className={styles.articlesCategorySection}>
-          {categories.map((category) => {
-            if (category.codeCategory === slug)
-              return (
-                <div key={category.id} className={styles.listArticle}>
-                  <div className={styles.categoryTitleWrapper}>
-                    <IoPricetags
-                      className={`${styles.tagsIcon} primaryTextColor`}
-                    />
-                    <h2 className="primaryTextColor fontGeorgia">
-                      {category.nameCategory}
-                    </h2>
+        <section
+          className={`${styles.articlesCategorySection} flex flex-row sml:flex sml:flex-col `}
+        >
+          {/* big screen content */}
+          <div
+            className={`${styles.articleByCategoryWrapper} sml:hidden lg:block `}
+          >
+            {categories.map((category) => {
+              if (category.codeCategory === slug)
+                return (
+                  <div
+                    key={category.id}
+                    className={`${styles.listArticle} px-16 py-8 `}
+                  >
+                    <div className={styles.categoryTitleWrapper}>
+                      <IoPricetags
+                        className={`${styles.tagsIcon} primaryTextColor`}
+                      />
+                      <h2 className="primaryTextColor fontGeorgia">
+                        {category.nameCategory}
+                      </h2>
+                    </div>
+                    {category.totalArticles > 0 ? (
+                      articles.map((article) => {
+                        if (article.category === slug)
+                          return (
+                            <CardArticleLg
+                              action={() =>
+                                router.push(
+                                  `/apps/articles/${article.titleArticle}`
+                                )
+                              }
+                              action2={() =>
+                                router.push(
+                                  `/apps/authors/${article.authorUsername}`
+                                )
+                              }
+                              key={article.id}
+                              imageArticle={article.imageArticle}
+                              titleArticle={article.titleArticle}
+                              descriptionArticle={article.descriptionArticle}
+                              authorPicture={article.authorPicture}
+                              author={article.author}
+                              createdAt={article.createdAt}
+                            />
+                          );
+                      })
+                    ) : (
+                      <p>Articles in this category are not yet available.</p>
+                    )}
                   </div>
-                  {category.totalArticles > 0 ? (
-                    articles.map((article) => {
-                      if (article.category === slug)
-                        return (
-                          <CardArticleLg
-                            action={() =>
-                              router.push(
-                                `/apps/articles/${article.titleArticle}`
-                              )
-                            }
-                            action2={() =>
-                              router.push(
-                                `/apps/authors/${article.authorUsername}`
-                              )
-                            }
-                            key={article.id}
-                            imageArticle={article.imageArticle}
-                            titleArticle={article.titleArticle}
-                            descriptionArticle={article.descriptionArticle}
-                            authorPicture={article.authorPicture}
-                            author={article.author}
-                            createdAt={article.createdAt}
-                          />
-                        );
-                    })
-                  ) : (
-                    <p>Articles in this category are not yet available.</p>
-                  )}
-                </div>
-              );
-          })}
+                );
+            })}
+          </div>
+
+          {/* mobile content */}
+          <div className="sml:block lg:hidden">
+            {categories.map((category) => {
+              if (category.codeCategory === slug)
+                return (
+                  <div
+                    key={category.id}
+                    className={`${styles.listArticle}  sml:px-5 `}
+                  >
+                    <div className={styles.categoryTitleWrapper}>
+                      <IoPricetags
+                        className={`${styles.tagsIcon} primaryTextColor`}
+                      />
+                      <h2 className="primaryTextColor fontGeorgia sml:text-lg">
+                        {category.nameCategory}
+                      </h2>
+                    </div>
+                    {category.totalArticles > 0 ? (
+                      articles.map((article) => {
+                        if (article.category === slug)
+                          return (
+                            <CardArticleMobile
+                              action={() =>
+                                router.push(
+                                  `/apps/articles/${article.titleArticle}`
+                                )
+                              }
+                              action2={() =>
+                                router.push(
+                                  `/apps/authors/${article.authorUsername}`
+                                )
+                              }
+                              key={article.id}
+                              imageArticle={article.imageArticle}
+                              titleArticle={article.titleArticle}
+                              descriptionArticle={article.descriptionArticle}
+                              authorPicture={article.authorPicture}
+                              author={article.author}
+                              createdAt={article.createdAt}
+                            />
+                          );
+                      })
+                    ) : (
+                      <p>Articles in this category are not yet available.</p>
+                    )}
+                  </div>
+                );
+            })}
+          </div>
 
           <div className={styles.relatedArticle}>
-            <h2 className="primaryTextColor fontGeorgia">Popular Tags</h2>
-            <p className="blackTextColor">
+            <h2 className="primaryTextColor fontGeorgia sml:text-xl">
+              Popular Tags
+            </h2>
+            <p className="blackTextColor sml:text-base">
               Explore new topics and satisfy your mind
             </p>
 
@@ -113,7 +176,7 @@ export default function Category() {
                 return (
                   <div>
                     <h2
-                      className={`${styles.topAuthorCategoryTitle} primaryTextColor fontGeorgia`}
+                      className={`${styles.topAuthorCategoryTitle} primaryTextColor fontGeorgia sml:text-xl `}
                     >
                       Top Authors in This Category
                     </h2>
