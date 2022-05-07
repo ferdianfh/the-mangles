@@ -23,3 +23,21 @@
 .formContainer h2 {
   text-align: center;
 }
+
+@media screen and (max-width: 628px) {
+  .signupContainer {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  .formContainer {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    /* margin: auto; */
+
+    margin-top: 0;
+  }
+}

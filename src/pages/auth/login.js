@@ -15,7 +15,7 @@ export default function Login() {
 
       <main className="main">
         <div
-          className={`${styles.loginContainer} bg-slate-50 justify-center align-middle`}
+          className={`${styles.loginContainer} bg-slate-50 justify-center align-middle sml:bg-white `}
         >
           <section className={styles.loginSection}>
             <div

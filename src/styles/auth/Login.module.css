@@ -13,7 +13,6 @@
   width: 470px;
   border-radius: 8px;
   box-shadow: 0.5px 3px 6.5px rgb(152, 132, 153);
-
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -26,4 +25,22 @@
 .formInput {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 628px) {
+  .loginContainer {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  .formContainer {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    /* margin: auto; */
+
+    margin-top: 0;
+  }
 }
