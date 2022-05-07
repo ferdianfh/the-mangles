@@ -1,8 +1,8 @@
 .articleSection {
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
 }
 .contentWrapper {
   flex: 2.8;
@@ -119,4 +119,52 @@
   font-size: 1em;
   border-radius: 5px;
   cursor: pointer;
+}
+
+
+@media screen and (max-width: 628px) {
+  .contentWrapper {
+    padding: 2em 1.25em;
+    border-right: none;
+  }
+  .authorName {
+    font-size: 0.14em;
+  }
+  .authorDateWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dateArticle {
+    margin-top: 0.75em;
+  }
+
+  .iconWrapper {
+    margin: 0.8em 0.5em 0 0;
+  }
+
+  .articleTitle {
+    font-size: 1.35em;
+    width: 364px;
+  }
+  .wrapper {
+    width: 364px;
+  }
+  .articleContent {
+    width: 364px;
+  }
+
+  .descriptionArticle {
+    font-size: 1.2em;
+  }
+  .paragrafArticle {
+    font-size: 1em;
+    line-height: 1.34em;
+  }
+
+  .additionalInfo {
+    border-top: 1px solid #eeedf0;
+    padding-left: 0;
+    margin: 0.5em 1.25em;
+  }
 }

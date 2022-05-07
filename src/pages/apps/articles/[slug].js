@@ -34,14 +34,16 @@ export default function ArticleDetails() {
       <Navbar activePage="articles" />
 
       <main className="main">
-        <section className={styles.articleSection}>
+        <section
+          className={`${styles.articleSection} flex flex-row sml:flex sml:flex-col`}
+        >
           {articles.map((article) => {
             if (article.titleArticle === slug)
               return (
                 <div className={styles.contentWrapper}>
                   <div className={styles.articleInfo}>
                     <div
-                      className={`${styles.wrapper} flex-row justify-between`}
+                      className={`${styles.wrapper} flex-row justify-between `}
                     >
                       <div className={styles.authorDateWrapper}>
                         <div className={styles.articleAuthorLg}>
@@ -52,23 +54,25 @@ export default function ArticleDetails() {
                             width={42}
                             height={42}
                           />
-                          <p>{article.author}</p>
+                          <p className={`${styles.authorName}`}>
+                            {article.author}
+                          </p>
                         </div>
 
                         <div className={styles.iconWrapper}>
                           <BsCircleFill
-                            className={`${styles.separateIcon} tertiaryTextColor`}
+                            className={`${styles.separateIcon} tertiaryTextColor sml:hidden lg:block `}
                           />
                         </div>
 
                         <p
-                          className={`${styles.dateArticle} tertiaryTextColor`}
+                          className={`${styles.dateArticle} tertiaryTextColor my-0 `}
                         >
                           {article.createdAt}
                         </p>
                       </div>
 
-                      <div className={styles.iconWrapper}>
+                      <div className={`${styles.iconWrapper} sml:self-start `}>
                         <FiSend
                           className={`${styles.bookmarkIconLg} tertiaryTextColor`}
                         />
