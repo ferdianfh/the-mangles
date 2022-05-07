@@ -21,7 +21,9 @@ export default function ResetPassword() {
             <div
               className={`${styles.formContainer} fontAvenir primaryTextColor primaryBgColor px-4`}
             >
-              <h2 className="mx-1 mt-5 mb-2 text-3xl ">Create New Password</h2>
+              <h2 className="mx-1 mt-5 mb-2 text-3xl sml:mt-12 ">
+                Create New Password
+              </h2>
               <p className="text-center mt-4 mb-8 text-base">
                 Create and confirm your new password to continue reset your old
                 password.

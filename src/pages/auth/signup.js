@@ -21,7 +21,7 @@ export default function Signup() {
             <div
               className={`${styles.formContainer} fontAvenir primaryTextColor primaryBgColor px-4`}
             >
-              <h2 className="mx-1 mt-5 mb-2 text-3xl ">Sign Up</h2>
+              <h2 className="mx-1 mt-5 mb-2 text-3xl sml:mt-12 ">Sign Up</h2>
               <p className="text-center mt-4 mb-8 text-base">
                 Hello, welcome to{" "}
                 <strong className="cursor-pointer hover:underline">
