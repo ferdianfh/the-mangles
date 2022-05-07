@@ -86,19 +86,19 @@ Here are some snippets about this app:
 
 > Web page
 
-|                      Landing Page                       |   Landing Page Mobile    |
-| :-----------------------------------------------------: | :----------------------: |
-| ![Landing Page](./src/assets/snippets/landing-page.png) |          ![]()           |
-|                    Registration Page                    | Registration Page Mobile |
-| ![Registration Page](./src/assets/snippets/signup.png)  |          ![]()           |
-|                        Home Page                        |     Home Page Mobile     |
-|     ![Home Page](./src/assets/snippets/home-1.png)      |          ![]()           |
-|                       Editor Page                       |    Editor Page Mobile    |
-|    ![Editor Page](./src/assets/snippets/editor.png)     |          ![]()           |
-|                      Articles Page                      |   Articles Page Mobile   |
-|  ![Articles Page](./src/assets/snippets/articles.png)   |          ![]()           |
-|                      Category Page                      |   Category Page Mobile   |
-|  ![Articles Page](./src/assets/snippets/category.png)   |          ![]()           |
+|                      Landing Page                       |                   Landing Page Mobile                   |
+| :-----------------------------------------------------: | :-----------------------------------------------------: |
+| ![Landing Page](./src/assets/snippets/landing-page.png) |  ![Mlanding](./src/assets/snippets/mobile-landing.jpg)  |
+|                    Registration Page                    |                Registration Page Mobile                 |
+| ![Registration Page](./src/assets/snippets/signup.png)  |  ![MRegister](./src/assets/snippets/mobile-signup.jpg)  |
+|                        Home Page                        |                    Home Page Mobile                     |
+|     ![Home Page](./src/assets/snippets/home-1.png)      |     ![MHome](./src/assets/snippets/mobile-home.jpg)     |
+|                       Editor Page                       |                   Editor Page Mobile                    |
+|    ![Editor Page](./src/assets/snippets/editor.png)     |                          ![]()                          |
+|                      Articles Page                      |                  Articles Page Mobile                   |
+|  ![Articles Page](./src/assets/snippets/articles.png)   | ![MArticles](./src/assets/snippets/mobile-articles.jpg) |
+|                      Category Page                      |                  Category Page Mobile                   |
+|  ![Articles Page](./src/assets/snippets/category.png)   | ![MCategory](./src/assets/snippets/mobile-category.jpg) |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
