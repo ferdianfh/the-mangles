@@ -22,10 +22,10 @@ export default function Articles() {
         keywords="The Mangles, News Web Apps, news, articles, write"
       />
 
-      <Navbar heroColor="quaternary" activePage="articles" />
+      <Navbar heroColor="primary" activePage="articles" />
 
       <main className="main">
-        <section className="heroSection quaternaryBgColor">
+        <section className="heroSection primaryBgColor">
           <div className="heroTitleWrapper">
             <h1 className="title fontGeorgia text-black text-7xl sml:text-4xl sml:mb-8">
               Start Writing Your <br /> Own Articles.

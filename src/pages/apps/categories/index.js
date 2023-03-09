@@ -25,10 +25,10 @@ export default function Categories() {
         keywords="The Mangles, News Web Apps, news, articles, write"
       />
 
-      <Navbar heroColor="tertiary" activePage="category" />
+      <Navbar heroColor="primary" activePage="category" />
 
       <main className="main">
-        <section className="heroSection tertiaryBgColor">
+        <section className="heroSection primaryBgColor">
           <div className="heroTitleWrapper">
             <h1 className="title fontGeorgia text-black text-7xl">
               Choose Article by Category.

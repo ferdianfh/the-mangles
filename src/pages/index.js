@@ -32,10 +32,10 @@ export default function Home() {
         keywords="The Mangles, News Web Apps, news, articles"
       />
 
-      <Navbar heroColor="quinary" activePage="home" />
+      <Navbar heroColor="primary" activePage="home" />
 
       <main className="main">
-        <section className="heroSection quinaryBgColor">
+        <section className="heroSection primaryBgColor">
           <div className="heroTitleWrapper">
             <h1 className="title fontGeorgia text-black text-7xl sml:text-4xl sml:mb-8 ">
               Share Information <br /> and Educate People.
